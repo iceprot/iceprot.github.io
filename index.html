@@ -5,12 +5,8 @@
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ICEPROT — Glace à l'eau protéinée</title>
-<meta name="description" content="ICEPROT, la glace à l'eau protéinée : 8 g de protéines, 0 g de sucres, 0 g de matières grasses, sans aspartame. Cold nutrition, marque française.">
+<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. ICEPROT, glace à l'eau protéinée.">
 <meta name="theme-color" content="#17130A">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ICEPROT — Post workout game changer.">
-<meta property="og:description" content="La glace à l'eau protéinée pour les sportifs. 8 g de protéines, 0 g de sucres, 0 g de matières grasses.">
-<meta property="og:locale" content="fr_FR">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,215 +19,245 @@
   --taupe:#6B6255; --gris:#8A8378; --sable:#C9C0B2; --blanc:#FFFFFF;
   --f-logo:'Poppins',sans-serif; --f-affiche:'Anton','Helvetica Neue',sans-serif;
   --f-label:'Barlow Condensed',sans-serif; --f-texte:'Barlow',sans-serif; --f-main:'Caveat',cursive;
-  --gutter:clamp(16px,5vw,64px); --max:1240px;
-  --papier:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .09 0 0 0 0 .07 0 0 0 0 .04 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --gutter:clamp(16px,4vw,48px); --max:1320px; --r:22px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{margin:0;background:var(--beige);color:var(--noir-chaud);font:400 1.0625rem/1.5 var(--f-texte);overflow-x:hidden}
-img,svg{display:block;max-width:100%}
+body{margin:0;background:var(--beige-clair);color:var(--noir-chaud);font:400 1.0625rem/1.5 var(--f-texte);overflow-x:hidden}
+img,svg,video{display:block;max-width:100%}
 a{color:inherit}
 h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.papier{position:relative;isolation:isolate}
-.papier::before{content:"";position:absolute;inset:0;background:var(--papier);opacity:.16;pointer-events:none;z-index:-1}
-
-/* typographie */
-.label{font:700 .875rem/1.2 var(--f-label);letter-spacing:.2em;text-transform:uppercase}
-.titre{font:400 clamp(2.6rem,7vw,5.25rem)/.88 var(--f-affiche);text-transform:uppercase;letter-spacing:.005em}
-.titre-p{font:800 clamp(2rem,4.6vw,3.4rem)/1 var(--f-logo);text-transform:uppercase;letter-spacing:-.035em}
-.filet{display:block;width:72px;height:4px;background:currentColor;margin:22px 0 0}
-.main{font:500 clamp(1.6rem,3vw,2.1rem)/1.05 var(--f-main);transform:rotate(-8deg);display:inline-block}
-.lead{font-size:1.1875rem;max-width:34em}
-.muted{color:var(--taupe)}
-
-/* boutons */
-.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 26px;border-radius:999px;font:700 1rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s}
-.btn-o{background:var(--orange);color:var(--noir-chaud)}
-.btn-o:hover{background:var(--orange-vif)}
-.btn-l{border-color:currentColor}
-.btn-l:hover{background:var(--noir-chaud);color:var(--blanc);border-color:var(--noir-chaud)}
-.sombre .btn-l:hover{background:var(--blanc);color:var(--noir-chaud);border-color:var(--blanc)}
-.btn svg{width:18px;height:18px}
+.sec{padding:clamp(72px,9vw,128px) 0}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px}
 
-/* en-tête */
-.top{position:sticky;top:0;z-index:20;background:var(--noir-chaud);color:var(--blanc)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.top .logo{width:150px;color:var(--blanc)}
-.nav{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-.nav a{font:600 .9375rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;opacity:.8}
-.nav a:hover{opacity:1;color:var(--orange-vif)}
-.top .btn{min-height:40px;padding:0 18px;font-size:.875rem}
-@media (max-width:900px){.nav{display:none}}
+/* typo */
+.label{font:700 .8125rem/1.2 var(--f-label);letter-spacing:.22em;text-transform:uppercase}
+.puce{display:inline-flex;align-items:center;min-height:32px;padding:0 16px;border:1.5px solid currentColor;border-radius:999px;font:700 .8125rem/1 var(--f-label);letter-spacing:.2em;text-transform:uppercase}
+.h2{font:400 clamp(2.6rem,6vw,4.8rem)/.9 var(--f-affiche);text-transform:uppercase}
+.h2 em,.h1 em{font:500 1.05em/1 var(--f-main);text-transform:none;color:var(--orange);display:inline-block;transform:rotate(-6deg)}
+.chapo{font-size:1.125rem;max-width:36em;color:var(--taupe)}
+.sombre .chapo{color:#C9C0B2}
 
-/* hero */
-.hero{overflow:hidden;padding:clamp(40px,7vw,96px) 0 clamp(72px,10vw,140px)}
-.hero .bg08{position:absolute;z-index:-1;right:-4vw;top:50%;transform:translateY(-52%);font:800 clamp(22rem,52vw,46rem)/.8 var(--f-logo);letter-spacing:-.06em;color:var(--orange);opacity:.95;user-select:none}
-.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
-.hero .logo-hero{width:min(300px,62vw);color:var(--noir-chaud);margin-bottom:clamp(28px,4vw,48px)}
-.hero .descr{margin-bottom:18px;color:var(--noir-chaud)}
-.hero h1{font:400 clamp(3.4rem,9.6vw,8.4rem)/.87 var(--f-affiche);text-transform:uppercase;letter-spacing:.005em}
-.hero .lead{margin-top:28px;max-width:28em}
-.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.pinceau{position:relative;display:inline-block;margin-top:40px;padding:14px 34px 18px 26px;color:var(--noir-chaud)}
-.pinceau svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;transform:rotate(-8deg)}
-.pinceau .main{transform:rotate(-8deg)}
-.hero .tube-zone{position:relative;min-height:420px;display:grid;place-items:center}
-.hero .tube{width:min(640px,118%);transform:rotate(-24deg);filter:drop-shadow(0 30px 30px rgba(23,19,10,.28))}
-@media (max-width:900px){
-  .hero .grid{grid-template-columns:1fr}
-  .hero .tube-zone{min-height:0;margin:24px -10% 0}
-  .hero .tube{width:100%;transform:rotate(-14deg)}
-  .hero .bg08{top:auto;bottom:2%;transform:none;right:-10vw;font-size:clamp(16rem,70vw,30rem)}
-}
+/* boutons pilule avec rond fléché */
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 8px 0 26px;border-radius:999px;font:700 .9375rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn .r{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:var(--noir-chaud);transition:transform .2s}
+.btn .r svg{width:18px;height:18px}
+.btn:hover .r{transform:translateX(3px)}
+.btn-n{background:var(--noir-chaud);color:var(--blanc)}
+.btn-n:hover{background:#000}
+.btn-b{background:var(--blanc);color:var(--noir-chaud)}
+.btn-l{padding:0 26px;border-color:currentColor}
+.btn-l:hover{background:var(--noir-chaud);color:var(--blanc);border-color:var(--noir-chaud)}
+.sombre .btn-l:hover,.hero .btn-l:hover{background:var(--blanc);color:var(--noir-chaud);border-color:var(--blanc)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
 
-/* bloc noir coupé en biais */
+/* 1. en-tête flottant */
+.top{position:absolute;z-index:30;top:18px;left:0;right:0}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pill{display:flex;align-items:center;gap:6px;background:var(--blanc);border-radius:999px;padding:8px 10px 8px 22px;box-shadow:0 8px 30px -12px rgba(23,19,10,.35)}
+.pill .logo{width:118px;color:var(--noir-chaud);margin-right:14px}
+.menu{display:flex;list-style:none;margin:0;padding:0}
+.menu>li{position:relative}
+.menu a,.menu button{display:flex;align-items:center;gap:6px;height:40px;padding:0 14px;border:0;background:none;border-radius:999px;font:600 .9375rem/1 var(--f-label);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.menu a:hover,.menu button:hover{background:var(--beige-clair)}
+.menu button svg{width:10px;height:10px;transition:transform .2s}
+.menu button[aria-expanded="true"] svg{transform:rotate(180deg)}
+.sous{position:absolute;top:calc(100% + 14px);left:-8px;width:340px;background:var(--blanc);border-radius:var(--r);padding:10px;box-shadow:0 20px 50px -20px rgba(23,19,10,.4);display:none}
+.sous.ouvert{display:block}
+.sous a{height:auto;padding:12px 14px;display:block;text-transform:none;letter-spacing:0;font:500 1rem/1.3 var(--f-texte);border-radius:14px}
+.sous a b{display:block;font:700 .9375rem/1.2 var(--f-label);letter-spacing:.12em;text-transform:uppercase}
+.sous a span{color:var(--taupe);font-size:.9375rem}
+.pill.d{padding:6px}
+.ico{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:0;background:none;cursor:pointer;position:relative;text-decoration:none}
+.ico:hover{background:var(--beige-clair)}
+.ico svg{width:20px;height:20px}
+.ico .nb{position:absolute;top:4px;right:2px;min-width:17px;height:17px;border-radius:9px;background:var(--orange);font:700 .6875rem/17px var(--f-label);text-align:center}
+.pill .btn{min-height:42px;padding:0 18px;font-size:.8125rem}
+.pill .btn svg{width:16px;height:16px}
+.burger{display:none}
+@media (max-width:980px){.menu{display:none}.burger{display:grid}.pill .logo{margin-right:4px}}
+@media (max-width:560px){.pill .btn span{display:none}.pill .btn{width:42px;padding:0;justify-content:center}.pill{padding-left:16px}.pill .logo{width:100px}}
+.tiroir{position:fixed;inset:0;z-index:40;background:var(--noir-chaud);color:var(--blanc);padding:90px var(--gutter) 40px;display:none;flex-direction:column;gap:6px}
+.tiroir.ouvert{display:flex}
+.tiroir a{font:400 2.4rem/1.15 var(--f-affiche);text-transform:uppercase;text-decoration:none}
+.tiroir .fermer{position:absolute;top:22px;right:var(--gutter);color:var(--blanc)}
+
+/* 2. hero vidéo */
+.hero{position:relative;min-height:max(640px,100svh);display:flex;align-items:center;color:var(--blanc);overflow:hidden;background:var(--noir-chaud)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,19,10,.78) 0%,rgba(23,19,10,.35) 55%,rgba(23,19,10,0) 80%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:110px;padding-bottom:80px}
+.hero .contenu{max-width:640px}
+.h1{font:400 clamp(3.4rem,8.6vw,7.6rem)/.86 var(--f-affiche);text-transform:uppercase}
+.hero .sous-titre{margin-top:26px;font:700 clamp(1.15rem,2vw,1.5rem)/1.2 var(--f-label);letter-spacing:.1em;text-transform:uppercase}
+.hero .texte{margin-top:14px;max-width:34em;color:#E1DBCE}
+.hero .actions{margin-top:30px}
+.hero .lecture{position:absolute;z-index:2;right:var(--gutter);bottom:28px;display:flex;align-items:center;gap:10px;height:44px;padding:0 18px 0 6px;border-radius:999px;border:1.5px solid rgba(255,255,255,.5);background:rgba(23,19,10,.35);color:var(--blanc);font:700 .8125rem/1 var(--f-label);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(6px)}
+.hero .lecture i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--blanc);color:var(--noir-chaud);font-style:normal}
+.hero .lecture svg{width:12px;height:12px}
+@media (max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(23,19,10,.35) 0%,rgba(23,19,10,.85) 70%)}.hero{align-items:flex-end}}
+
+/* 3. bandeau bénéfices */
+.benef{background:var(--orange);color:var(--noir-chaud)}
+.benef ul{display:grid;grid-template-columns:repeat(3,1fr);list-style:none;margin:0 auto;padding:0;max-width:var(--max)}
+.benef li{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 12px;font:700 1.0625rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase}
+.benef li+li{border-left:1px solid rgba(23,19,10,.25)}
+.benef svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.benef b{text-transform:none}
+@media (max-width:700px){.benef ul{grid-template-columns:1fr}.benef li+li{border-left:0;border-top:1px solid rgba(23,19,10,.25)}.benef li{justify-content:flex-start;padding:14px var(--gutter)}}
+
+/* 4. produit vedette */
+.vedette{background:var(--blanc)}
+.vedette .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}
+.orbite{position:relative;aspect-ratio:1;max-width:600px;width:100%;margin:0 auto}
+.orbite .cercle{position:absolute;inset:9%;border-radius:50%;border:1.5px solid var(--orange)}
+.orbite .disque{position:absolute;inset:30%;border-radius:50%;background:var(--orange)}
+.orbite .tube{position:absolute;left:4%;right:4%;top:50%;transform:translateY(-50%) rotate(-62deg);filter:drop-shadow(0 26px 26px rgba(23,19,10,.3))}
+.orbite .tag{position:absolute;transform:translate(-50%,-50%);background:var(--blanc);border:1.5px solid var(--noir-chaud);border-radius:999px;padding:8px 16px;font:600 .9375rem/1 var(--f-label);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.orbite .lien{position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);font:700 .875rem/1 var(--f-label);letter-spacing:.14em;text-transform:uppercase;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.orbite .lien svg{width:16px;height:16px}
+.vedette h2{margin:12px 0 18px}
+.vedette h2 .o{color:var(--orange);display:block;font:800 .62em/1 var(--f-logo);letter-spacing:-.035em;margin-bottom:6px}
+.ronds{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0 26px;list-style:none;padding:0}
+.ronds li{text-align:center;font:700 .75rem/1.15 var(--f-label);letter-spacing:.14em;text-transform:uppercase}
+.ronds span{display:grid;place-items:center;width:62px;height:62px;margin:0 auto 10px;border-radius:50%;background:var(--orange)}
+.ronds svg,.benef svg{text-transform:none}
+.ronds svg{width:58px;height:58px;fill:none;stroke:var(--noir-chaud);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.coches{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.coches li{display:flex;gap:12px;align-items:center}
+.coches i{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--noir-chaud);color:var(--blanc)}
+.sombre .coches i{background:var(--orange);color:var(--noir-chaud)}
+.coches svg{width:12px;height:12px}
+.prix{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-top:34px;padding-top:24px;border-top:1px solid var(--sable)}
+.prix small{display:block;font:700 .75rem/1 var(--f-label);letter-spacing:.2em;color:var(--taupe);margin-bottom:6px}
+.prix strong{font:800 2.2rem/1 var(--f-logo);letter-spacing:-.03em}
+@media (max-width:980px){.vedette .grille{grid-template-columns:1fr}.orbite{max-width:480px}}
+@media (max-width:480px){.orbite .tag{font-size:.75rem;padding:6px 10px}.ronds{grid-template-columns:repeat(2,1fr);row-gap:20px}}
+
+/* 5. inscription */
+.inscr{position:relative;padding:clamp(48px,7vw,96px) 0;overflow:hidden;isolation:isolate;background:var(--orange-brule)}
+.visuel-ph{position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(-30deg,rgba(255,255,255,.06) 0 2px,transparent 2px 22px),radial-gradient(circle at 15% 30%,var(--orange-vif),transparent 45%),radial-gradient(circle at 85% 75%,var(--orange),transparent 50%),var(--orange-brule)}
+.visuel-ph .mention{position:absolute;right:16px;bottom:12px;font:700 .75rem/1 var(--f-label);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.carte-verre{max-width:860px;margin:0 auto;background:rgba(236,230,219,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:28px;padding:clamp(32px,5vw,64px) clamp(20px,5vw,72px);text-align:center}
+.carte-verre h2{margin:18px 0 14px}
+.carte-verre .chapo{margin:0 auto}
+.form{max-width:440px;margin:30px auto 0;display:grid;gap:12px;text-align:left}
+.form input[type=email],.form input[type=tel]{width:100%;height:52px;padding:0 22px;border-radius:999px;border:1.5px solid var(--noir-chaud);background:var(--blanc);font:400 1rem var(--f-texte);color:var(--noir-chaud)}
+.form label.ok{display:flex;gap:10px;align-items:flex-start;font-size:.9375rem;color:var(--taupe)}
+.form label.ok input{margin-top:4px;accent-color:var(--orange)}
+.form .btn{justify-content:center}
+.form .retour{font-size:.9375rem;text-align:center;min-height:1.5em}
+
+/* 6. profils */
+.profils .tete{max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.profils .tete .chapo{margin-top:18px}
+.cartes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.carte{background:var(--blanc);border-radius:var(--r);padding:24px 22px 28px;display:flex;flex-direction:column;min-height:300px;transition:background .25s,color .25s}
+.carte .n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange);font:700 .8125rem/1 var(--f-label);letter-spacing:.06em}
+.carte h3{margin-top:auto;font:400 1.75rem/.95 var(--f-affiche);text-transform:uppercase;padding-top:30px}
+.carte p{margin-top:12px;font-size:.9375rem;color:var(--taupe);transition:color .25s}
+.carte.on,.carte:hover{background:var(--noir-chaud);color:var(--blanc)}
+.carte.on p,.carte:hover p{color:#C9C0B2}
+@media (max-width:1100px){.cartes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cartes{grid-template-columns:1fr}.carte{min-height:0}}
+
+/* 7. pourquoi */
+.pourquoi{background:var(--blanc)}
+.pourquoi .grille{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,90px);align-items:center}
+.photo-ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--noir-chaud);display:grid;place-items:center;isolation:isolate}
+.photo-ph::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 50% 40%,#3A2E1C,var(--noir-chaud) 70%)}
+.photo-ph .tube{width:130%;max-width:none;transform:rotate(-70deg)}
+.photo-ph .mention{position:absolute;left:16px;bottom:14px;font:700 .75rem/1 var(--f-label);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.pourquoi h2{margin:18px 0 16px}
+.coches.deux{grid-template-columns:1fr 1fr;margin-top:28px;gap:14px 24px}
+.trio{display:flex;margin-top:44px}
+.trio article{aspect-ratio:1;border:1.5px solid var(--sable);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5%;flex:0 0 37%;margin-right:-5.5%;background:rgba(255,255,255,.6)}
+.trio article:last-child{margin-right:0}
+.trio .puce{min-height:24px;padding:0 10px;font-size:.625rem}
+.trio h3{font:400 1.6rem/1 var(--f-affiche);text-transform:uppercase;margin:12px 0 8px}
+.trio p{font-size:.8125rem;line-height:1.35;color:var(--taupe)}
+@media (max-width:980px){.pourquoi .grille{grid-template-columns:1fr}.photo-ph{aspect-ratio:4/3}.photo-ph .tube{width:90%;transform:rotate(-20deg)}}
+@media (max-width:560px){.coches.deux{grid-template-columns:1fr}.trio{flex-direction:column;gap:12px}.trio article{flex:none;aspect-ratio:auto;border-radius:var(--r);margin:0;padding:24px}}
+
+/* 8. protéines 101 + 9. comparatif (bloc noir) */
 .sombre{background:var(--noir-chaud);color:var(--blanc)}
-.biais-haut{clip-path:polygon(0 clamp(40px,7vw,110px),100% 0,100% 100%,0 100%);margin-top:calc(-1 * clamp(40px,7vw,110px));padding-top:calc(clamp(40px,7vw,110px) + clamp(56px,7vw,96px))}
+.c101 .tete{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.c101 .label{display:flex;align-items:center;gap:14px;color:var(--orange-vif);margin-bottom:18px}
+.c101 .label::before{content:"";width:40px;height:1.5px;background:currentColor}
+.c101 .tete .actions{margin-top:24px}
+.quatre{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(40px,5vw,64px);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);overflow:hidden}
+.quatre article{padding:26px 24px 30px}
+.quatre article+article{border-left:1px solid rgba(255,255,255,.2)}
+.quatre .n{font:700 .8125rem/1 var(--f-label);letter-spacing:.2em;color:#8A8378}
+.quatre h3{font:700 1.25rem/1.15 var(--f-label);letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
+.quatre p{font-size:.9375rem;color:#B9B1A4}
+@media (max-width:980px){.c101 .tete{grid-template-columns:1fr}.quatre{grid-template-columns:1fr 1fr}.quatre article:nth-child(3){border-left:0}.quatre article:nth-child(n+3){border-top:1px solid rgba(255,255,255,.2)}}
+@media (max-width:560px){.quatre{grid-template-columns:1fr}.quatre article+article{border-left:0;border-top:1px solid rgba(255,255,255,.2)}}
+.comp{padding-top:0}
+.comp .tete{text-align:center;max-width:760px;margin:0 auto clamp(36px,5vw,56px)}
+.comp .tete .chapo{margin:18px auto 0}
+.table-wrap{max-width:1000px;margin:0 auto;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);overflow-x:auto}
+.comp table{width:100%;min-width:620px;border-collapse:collapse}
+.comp th,.comp td{padding:18px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.14);font-size:1rem}
+.comp thead th{border-top:0;font:700 1rem/1.1 var(--f-label);letter-spacing:.14em;text-transform:uppercase}
+.comp tbody th{text-align:left;font-weight:500}
+.comp .ice{background:var(--orange);color:var(--noir-chaud);font-weight:700}
+.comp thead .ice{font:400 1.4rem/1 var(--f-affiche);letter-spacing:.02em}
+.comp td svg{width:18px;height:18px;margin:0 auto}
+.comp .non{color:#8A8378}
+.comp .actions{justify-content:center;margin-top:36px}
 
-/* chiffres */
-.chiffres{padding-bottom:clamp(64px,8vw,120px)}
-.chiffres .head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:clamp(40px,5vw,64px)}
-.chiffres .head .label{color:var(--orange-vif)}
-.chiffres .head p.muted{color:#B9B1A4;max-width:26em}
-.chiffres .grille{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
-.big8{display:flex;align-items:center;gap:28px}
-.big8 .n{font:800 clamp(8rem,22vw,17rem)/.8 var(--f-logo);letter-spacing:-.06em;color:var(--orange)}
-.big8 .n small{font-size:.48em;letter-spacing:-.04em}
-.big8 .t{font:700 clamp(1.4rem,2.6vw,2rem)/1.05 var(--f-label);letter-spacing:.12em;text-transform:uppercase}
-.big8 .t span{display:block;font:500 1rem/1.4 var(--f-texte);letter-spacing:0;text-transform:none;color:#B9B1A4;margin-top:10px;max-width:16em}
-.args{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.args li{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)}
-.args li:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
-.picto{width:56px;height:56px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.args .k{font:700 1.25rem/1.1 var(--f-label);letter-spacing:.14em;text-transform:uppercase}
-.pastille{display:inline-flex;align-items:center;min-height:34px;padding:0 16px;border:1.5px solid currentColor;border-radius:999px;font:700 .9375rem/1 var(--f-label);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.pastille.v{text-transform:none;letter-spacing:.08em;font-size:1.0625rem}
-.pastille.o{border-color:var(--orange);color:var(--orange-vif)}
-@media (max-width:900px){.chiffres .grille{grid-template-columns:1fr}}
-@media (max-width:420px){.args li{grid-template-columns:48px 1fr;row-gap:8px}.args .pastille{grid-column:2;justify-self:start}.picto{width:46px;height:46px}.big8{flex-direction:column;align-items:flex-start;gap:12px}}
+/* 10. FAQ */
+.faq{background:var(--beige)}
+.faq .wrap{max-width:900px}
+.faq h2{text-align:center;margin-bottom:clamp(32px,4vw,48px)}
+.faq details{border-top:1px solid var(--sable)}
+.faq details:last-of-type{border-bottom:1px solid var(--sable)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font:700 1.375rem/1.2 var(--f-label);letter-spacing:.04em;text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--noir-chaud);transition:transform .25s,background .2s}
+.faq summary i svg{width:14px;height:14px}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--noir-chaud);color:var(--blanc)}
+.faq details p{padding:0 56px 26px 0;color:var(--taupe)}
 
-/* produit */
-.produit{background:var(--beige-clair);padding:clamp(72px,9vw,130px) 0}
-.produit .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.produit .visuel{position:relative;display:grid;place-items:center;aspect-ratio:1/1;max-width:560px;width:100%;margin:0 auto}
-.produit .visuel .rond{position:absolute;inset:6%;border-radius:50%;background:var(--noir-chaud)}
-.produit .visuel .ml{position:absolute;z-index:1;left:0;bottom:4%;background:var(--orange);padding:16px 20px 14px;border-radius:16px;font:800 clamp(2.2rem,4.6vw,3.4rem)/.8 var(--f-logo);letter-spacing:-.05em;color:var(--noir-chaud)}
-.produit .visuel .ml small{display:block;font:700 .875rem/1 var(--f-label);letter-spacing:.2em;margin-top:10px}
-.produit .visuel .tube{position:relative;width:112%;max-width:none;transform:rotate(-30deg);filter:drop-shadow(0 24px 24px rgba(23,19,10,.25))}
-.produit h2{margin:14px 0 22px}
-.produit p+p{margin-top:14px}
-.parfum{margin-top:30px;display:flex;align-items:center;gap:18px;padding:18px 22px;background:var(--blanc);border:1px solid var(--sable);border-radius:18px}
-.parfum .pt{width:46px;height:46px;flex:none;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FF8A1E,#D63A12 70%);box-shadow:inset 0 0 0 3px rgba(255,255,255,.55)}
-.parfum .label{color:var(--taupe);font-size:.8125rem}
-.parfum strong{display:block;font:700 1.5rem/1.1 var(--f-label);letter-spacing:.08em;text-transform:uppercase}
-.cinq{margin-top:26px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.cinq .n{font:800 3.6rem/.85 var(--f-logo);letter-spacing:-.05em}
-.cinq .n small{font-size:.42em;letter-spacing:.02em}
-.cinq .main{font-size:1.75rem;max-width:13em;transform:rotate(-4deg)}
-@media (max-width:900px){.produit .grille{grid-template-columns:1fr}.produit .visuel{max-width:440px}}
+/* 11. appel final */
+.final{text-align:center;padding-bottom:clamp(56px,7vw,90px)}
+.badge{width:130px;height:130px;margin:0 auto 26px;position:relative}
+.badge svg.txt{width:100%;height:100%;animation:tourne 18s linear infinite}
+.badge .coeur{position:absolute;inset:32%;border-radius:50%;background:var(--orange);display:grid;place-items:center}
+.badge .coeur::after{content:"";width:34%;height:34%;border-radius:50%;background:var(--noir-chaud)}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.final .h2{font-size:clamp(3.4rem,11vw,9rem)}
+.final .chapo{margin:22px auto 0}
+.final .actions{justify-content:center;margin-top:32px}
 
-/* fuel your next level */
-.fuel{overflow:hidden;padding:clamp(48px,6vw,80px) 0;background:var(--noir);color:var(--blanc)}
-.fuel .ligne{display:block;white-space:nowrap;font:400 clamp(3rem,9vw,7.5rem)/.92 var(--f-affiche);text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--orange);letter-spacing:.01em}
-.fuel .ligne.plein{color:var(--orange);-webkit-text-stroke:0}
-.fuel .ligne:nth-child(even){transform:translateX(-14%)}
-@media (prefers-reduced-motion:no-preference){.fuel .ligne{animation:defile 38s linear infinite}.fuel .ligne:nth-child(even){animation-direction:reverse}}
-@keyframes defile{from{translate:0 0}to{translate:-25% 0}}
+/* 12. pied de page */
+.pied{background:var(--noir-chaud);color:var(--blanc);padding-top:clamp(40px,5vw,64px);overflow:hidden}
+.cols{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
+.cols h2{font:700 .8125rem/1 var(--f-label);letter-spacing:.22em;text-transform:uppercase;color:#8A8378;margin-bottom:18px}
+.cols ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.cols a{text-decoration:none;font-size:.9375rem}
+.cols a:hover{color:var(--orange-vif)}
+.reseaux{display:flex;gap:10px}
+.reseaux a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3)}
+.reseaux a:hover{border-color:var(--orange-vif)}
+.reseaux svg{width:18px;height:18px}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:22px 0;font:600 .8125rem/1.4 var(--f-label);letter-spacing:.14em;text-transform:uppercase;color:#8A8378}
+.geant{padding:10px var(--gutter) 0;max-width:1600px;margin:0 auto;color:var(--beige-clair)}
+.geant .sig{text-align:center;font:700 .875rem/1 var(--f-label);letter-spacing:.22em;text-transform:uppercase;color:#8A8378;margin-bottom:22px}
+.geant svg{width:100%;height:auto;margin-bottom:-1.2%}
+@media (max-width:980px){.cols{grid-template-columns:1fr 1fr}.cols>div:last-child{grid-column:1/-1}}
 
-/* pour qui */
-.qui{padding:clamp(72px,9vw,130px) 0}
-.qui .intro{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
-.sports{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.sports .pastille{border-color:var(--noir-chaud)}
-.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
-.tri article{position:relative;background:var(--blanc);border:1px solid var(--sable);border-radius:22px;padding:30px 28px 32px;overflow:hidden;isolation:isolate}
-.tri article .num{position:absolute;right:14px;top:-8px;z-index:-1;font:800 9rem/1 var(--f-logo);letter-spacing:-.06em;color:var(--beige-clair)}
-.tri h3{font:400 2.6rem/.9 var(--f-affiche);text-transform:uppercase;margin:18px 0 12px}
-.tri h3 u{text-decoration:none;box-shadow:inset 0 -.18em 0 var(--orange)}
-.tri .picto{width:52px;height:52px}
-.tri p{color:var(--taupe)}
-.tri article.noir{background:var(--noir-chaud);border-color:var(--noir-chaud);color:var(--blanc)}
-.tri article.noir .num{color:#2A2419}
-.tri article.noir p{color:#C9C0B2}
-@media (max-width:900px){.qui .intro{grid-template-columns:1fr}.tri{grid-template-columns:1fr}}
-
-/* ingrédients */
-.nutri{background:var(--beige-clair);padding:clamp(72px,9vw,130px) 0}
-.nutri .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:start}
-.nutri h2{margin:14px 0 26px}
-.ingr{font-size:1.125rem}
-.ingr strong{font-weight:700;letter-spacing:.02em}
-.note{margin-top:20px;font-size:.9375rem;color:var(--taupe)}
-.allerg{margin-top:22px;display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1.5px solid var(--noir-chaud);border-radius:999px;font:700 .9375rem/1.1 var(--f-label);letter-spacing:.12em;text-transform:uppercase}
-.vn{background:var(--blanc);border:2px solid var(--noir-chaud);border-radius:6px;padding:22px 24px 18px}
-.vn .vn-h{display:flex;justify-content:space-between;align-items:end;gap:16px;border-bottom:8px solid var(--noir-chaud);padding-bottom:12px}
-.vn .vn-h h3{font:800 1.5rem/1 var(--f-logo);text-transform:uppercase;letter-spacing:-.02em}
-.vn .vn-h span{font:600 .875rem/1.2 var(--f-label);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);text-align:right}
-.vn table{width:100%;border-collapse:collapse;font-size:1.0625rem}
-.vn th,.vn td{padding:11px 0;border-bottom:1px solid var(--sable);text-align:left;font-weight:500}
-.vn td{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-.vn tr.sub th{padding-left:18px;font-weight:400;color:var(--taupe)}
-.vn tr.sub td{font-weight:400}
-.vn tr.prot th,.vn tr.prot td{font:800 1.375rem/1 var(--f-logo);letter-spacing:-.02em;border-bottom:4px solid var(--noir-chaud);padding:16px 0}
-.vn tr:last-child th,.vn tr:last-child td{border-bottom:0}
-.vn .conserv{margin-top:14px;padding-top:14px;border-top:1px solid var(--sable);font-size:.9375rem;color:var(--taupe)}
-@media (max-width:900px){.nutri .grille{grid-template-columns:1fr}}
-
-/* où nous trouver */
-.trouver{padding:clamp(72px,9vw,130px) 0}
-.trouver .grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.trouver h2{margin:14px 0 22px}
-.trouver .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.stand{position:relative;background:var(--noir);color:var(--blanc);border-radius:6px;aspect-ratio:120/35;display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;padding:0 5%;box-shadow:0 30px 50px -24px rgba(23,19,10,.55)}
-.stand .fuel-s{font:400 clamp(.9rem,2.1vw,1.55rem)/.9 var(--f-affiche);text-transform:uppercase;color:var(--orange)}
-.stand .logo{width:100%;color:var(--blanc)}
-.stand .main{justify-self:end;font-size:clamp(.95rem,2.1vw,1.55rem);text-align:right;transform:rotate(-8deg)}
-.stand-legende{margin-top:16px;font-size:.9375rem;color:var(--taupe)}
-.etapes{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
-.etapes li{display:flex;gap:16px;align-items:baseline}
-.etapes b{font:800 1.125rem/1 var(--f-logo);color:var(--noir-chaud);min-width:2.2em}
-@media (max-width:900px){.trouver .grille{grid-template-columns:1fr}}
-
-/* instagram */
-.insta{background:var(--orange);color:var(--noir-chaud);overflow:hidden;padding:clamp(72px,9vw,120px) 0}
-.insta .grille{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,80px);align-items:center}
-.insta .titre{font-size:clamp(3.4rem,10vw,8rem)}
-.insta .handle{display:block;font:800 clamp(1.6rem,4.4vw,3rem)/1 var(--f-logo);letter-spacing:-.035em;margin-top:18px;text-decoration:none;word-break:break-word}
-.insta .handle:hover{color:var(--blanc)}
-.insta .tease{margin-top:28px;font:500 1.25rem/1.4 var(--f-texte);max-width:26em}
-.insta .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
-.insta .btn-n{background:var(--noir-chaud);color:var(--blanc)}
-.insta .btn-n:hover{background:var(--noir)}
-.qr{justify-self:center;background:var(--blanc);border-radius:22px;padding:24px 24px 18px;width:min(300px,100%);text-align:center;transform:rotate(3deg);box-shadow:0 30px 40px -20px rgba(23,19,10,.45)}
-.qr svg{width:100%;height:auto}
-.qr .label{margin-top:14px;display:block}
-@media (max-width:900px){.insta .grille{grid-template-columns:1fr}}
-
-/* pied de page */
-.pied{background:var(--noir-chaud);color:var(--blanc);padding:clamp(56px,7vw,90px) 0 32px}
-.pied .haut{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;align-items:flex-start;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.16)}
-.pied .logo{width:220px;color:var(--blanc)}
-.pied .sig{font:400 clamp(1.8rem,4vw,2.8rem)/.95 var(--f-affiche);text-transform:uppercase;max-width:12em}
-.pied .sig span{color:var(--orange)}
-.pied .bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:24px;font:600 .875rem/1.4 var(--f-label);letter-spacing:.14em;text-transform:uppercase;color:#B9B1A4}
-.pied .bas ul{display:flex;flex-wrap:wrap;gap:22px;list-style:none;margin:0;padding:0}
-.pied .bas a{text-decoration:none}
-.pied .bas a:hover{color:var(--orange-vif)}
-
-/* apparition */
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.ph{outline:1px dashed rgba(242,112,10,.0)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-
-<!-- Logo vectoriel : Poppins ExtraBold vectorisé, approche −0,025 em, filet en réserve
-     du fût du I au fût du T, centré sur la barre centrale du E, épaisseur 7,5 % des capitales. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <clipPath id="filet-iceprot"><path clip-rule="evenodd" d="M-20 -40H4200V1200H-20ZM56 320V373H3947V320Z"/></clipPath>
@@ -288,255 +314,325 @@ h1,h2,h3,p{margin:0}
       <rect x="40" y="10" width="920" height="180" rx="16" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2"/>
       <path d="M70 26h860" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
     </symbol>
+    <symbol id="i-check" viewBox="0 0 12 12"><path d="M2 6.2l2.6 2.6L10 3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
+<!-- 1. EN-TÊTE -->
 <header class="top">
   <div class="wrap">
-    <a href="#top" aria-label="ICEPROT, retour en haut"><svg class="logo" viewBox="0 -12 4152 730" fill="currentColor" aria-hidden="true"><use href="#wm"/></svg></a>
-    <nav aria-label="Navigation principale">
-      <ul class="nav">
-        <li><a href="#chiffres">Les chiffres</a></li>
-        <li><a href="#produit">Le produit</a></li>
-        <li><a href="#pour-qui">Pour qui</a></li>
-        <li><a href="#nutrition">Nutrition</a></li>
-        <li><a href="#trouver">Où nous trouver</a></li>
-      </ul>
-    </nav>
-    <a class="btn btn-o" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Follow us</a>
+    <div class="pill">
+      <a href="#top" aria-label="ICEPROT, accueil"><svg class="logo" viewBox="0 -12 4152 730" fill="currentColor" aria-hidden="true"><use href="#wm"/></svg></a>
+      <nav aria-label="Navigation principale">
+        <ul class="menu">
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="sous-boutique" data-champ="nav.boutique">Boutique <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <div class="sous" id="sous-boutique">
+              <a href="#produit"><b data-champ="nav.boutique.1.titre">Lorem ipsum</b><span data-champ="nav.boutique.1.texte">Dolor sit amet · XX,XX €</span></a>
+              <a href="#produit"><b data-champ="nav.boutique.2.titre">Consectetur pack</b><span data-champ="nav.boutique.2.texte">Adipiscing elit sed do</span></a>
+              <a href="#produit"><b data-champ="nav.boutique.3.titre">Tout voir</b></a>
+            </div>
+          </li>
+          <li><a href="#pourquoi" data-champ="nav.2">Pourquoi ICEPROT</a></li>
+          <li><a href="#proteines-101" data-champ="nav.3">Protéines 101</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pill d">
+      <a class="ico" href="#produit" aria-label="Panier, 0 article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="nb">0</span></a>
+      <a class="btn btn-n" href="#inscription"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-champ="nav.connexion">Connexion</span></a>
+      <button class="ico burger" type="button" aria-label="Ouvrir le menu" aria-controls="tiroir" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
   </div>
 </header>
+<div class="tiroir" id="tiroir" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="ico fermer" type="button" aria-label="Fermer le menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#produit">Boutique</a><a href="#pourquoi">Pourquoi ICEPROT</a><a href="#proteines-101">Protéines 101</a><a href="#faq">FAQ</a><a href="#inscription">Connexion</a>
+</div>
 
 <main id="top">
 
-  <!-- 1. HERO -->
-  <section class="hero papier" aria-labelledby="h-hero">
-    <div class="bg08" aria-hidden="true">08</div>
-    <div class="wrap grid">
-      <div>
-        <svg class="logo-hero" viewBox="0 -12 4152 1137" fill="currentColor" role="img" aria-label="ICEPROT — Cold Nutrition"><use href="#logo-bl"/></svg>
-        <p class="label descr">Glace à l'eau protéinée · Marque française</p>
-        <h1 id="h-hero">Post workout game changer.</h1>
-        <span class="filet" aria-hidden="true"></span>
-        <p class="lead">8 g de protéines. 0 g de sucres. 0 g de matières grasses. La récupération passe en version glacée.</p>
+  <!-- 2. HERO VIDÉO -->
+  <section class="hero" aria-labelledby="h-hero">
+    <video id="video-hero" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+      <!-- Remplacer par la vidéo définitive (prévoir aussi une version mobile verticale) -->
+      <source src="assets/video/hero-provisoire.webm" type="video/webm">
+      <source src="assets/video/hero-provisoire.mp4" type="video/mp4">
+    </video>
+    <div class="wrap">
+      <div class="contenu">
+        <p class="label" style="color:var(--orange-vif);margin-bottom:18px" data-champ="hero.surtitre">Lorem ipsum dolor</p>
+        <h1 id="h-hero" class="h1" data-champ="hero.titre">Lorem ipsum dolor <em>sit amet</em></h1>
+        <p class="sous-titre" data-champ="hero.sous-titre">Consectetur adipiscing elit sed do</p>
+        <p class="texte" data-champ="hero.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <div class="actions">
-          <a class="btn btn-o" href="#produit">Découvrir la glace <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
-          <a class="btn btn-l" href="#trouver">Où nous trouver</a>
+          <a class="btn btn-b" href="#produit"><span data-champ="hero.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
+          <a class="btn btn-l" href="#proteines-101" data-champ="hero.bouton-2">Dolor sit amet</a>
         </div>
-        <div class="pinceau">
-          <svg viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#F2700A" d="M10 30c40-14 120-22 190-20 70 1 140 3 188 10 9 2 10 14 2 17-8 2-4 7 3 10 7 4 3 13-6 14-66 7-150 12-232 11-52 0-104-3-140-8-12-2-12-13-2-16 8-2 4-6-4-8-11-3-10-8 1-10z"/></svg>
-          <span class="main">La glace qui booste vos performances</span>
-        </div>
-      </div>
-      <div class="tube-zone">
-        <svg class="tube" viewBox="0 0 1000 200" role="img" aria-label="Tube ICEPROT de 100 ml, parfum orange sanguine"><use href="#tube"/></svg>
       </div>
     </div>
+    <button class="lecture" type="button" aria-controls="video-hero" aria-label="Mettre la vidéo en pause"><i><svg viewBox="0 0 12 12" aria-hidden="true"><path class="pz" d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg></i><span>Pause</span></button>
   </section>
 
-  <!-- 2. LES CHIFFRES -->
-  <section id="chiffres" class="sombre biais-haut chiffres" aria-labelledby="h-chiffres">
-    <div class="wrap">
-      <div class="head rv">
-        <div>
-          <p class="label">Cold nutrition</p>
-          <h2 id="h-chiffres" class="titre" style="margin-top:14px">Tout ce qu'il faut.<br>Rien de trop.</h2>
-        </div>
-        <p class="muted">La nutrition sportive en version glacée. Une glace à l'eau, des protéines, et c'est tout.</p>
+  <!-- 3. BANDEAU BÉNÉFICES -->
+  <section class="benef" aria-label="Les bénéfices">
+    <ul>
+      <li><svg aria-hidden="true"><use href="#i-medaille"/></svg><span data-champ="benef.1"><b>8 g</b> protéines</span></li>
+      <li><svg aria-hidden="true"><use href="#i-cube"/></svg><span data-champ="benef.2"><b>0 g</b> sucres</span></li>
+      <li><svg aria-hidden="true"><use href="#i-goutte"/></svg><span data-champ="benef.3"><b>0 g</b> matières grasses</span></li>
+    </ul>
+  </section>
+
+  <!-- 4. PRODUIT VEDETTE -->
+  <section id="produit" class="vedette sec" aria-labelledby="h-produit">
+    <div class="wrap grille">
+      <div class="orbite rv">
+        <div class="cercle" aria-hidden="true"></div>
+        <div class="disque" aria-hidden="true"></div>
+        <svg class="tube" viewBox="0 0 1000 200" role="img" aria-label="Tube ICEPROT"><use href="#tube"/></svg>
+        <span class="tag" style="left:30%;top:9%" data-champ="produit.orbite.1">Lorem ipsum</span>
+        <span class="tag" style="left:84%;top:21%" data-champ="produit.orbite.2">Dolor sit</span>
+        <span class="tag" style="left:9%;top:38%" data-champ="produit.orbite.3">Amet elit</span>
+        <span class="tag" style="left:91%;top:67%" data-champ="produit.orbite.4">Consectetur</span>
+        <span class="tag" style="left:16%;top:80%" data-champ="produit.orbite.5">Adipiscing</span>
+        <span class="tag" style="left:58%;top:93%" data-champ="produit.orbite.6">Sed do</span>
       </div>
-      <div class="grille">
-        <div class="big8 rv">
-          <div class="n">8<small>g</small></div>
-          <p class="t">de protéines<br>par glace<span>Des protéines de lactosérum dans chaque tube de 100 ml.</span></p>
-        </div>
-        <ul class="args rv">
-          <li><svg class="picto" aria-hidden="true"><use href="#i-medaille"/></svg><span class="k">Protéines</span><span class="pastille v o">8 g</span></li>
-          <li><svg class="picto" aria-hidden="true"><use href="#i-cube"/></svg><span class="k">Sucres</span><span class="pastille v">0 g</span></li>
-          <li><svg class="picto" aria-hidden="true"><use href="#i-goutte"/></svg><span class="k">Matières grasses</span><span class="pastille v">0 g</span></li>
-          <li><svg class="picto" aria-hidden="true"><use href="#i-feuille"/></svg><span class="k">Aspartame</span><span class="pastille">Sans</span></li>
-          <li><svg class="picto" aria-hidden="true"><use href="#i-eclair"/></svg><span class="k">Électrolytes</span><span class="pastille">Ajoutés</span></li>
+      <div class="rv">
+        <p class="label" style="color:var(--taupe)" data-champ="produit.surtitre">Lorem ipsum</p>
+        <h2 id="h-produit" class="h2"><span class="o">ICEPROT</span><span data-champ="produit.titre">Lorem ipsum dolor sit amet</span></h2>
+        <p class="chapo" data-champ="produit.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <ul class="ronds">
+          <li><span><svg aria-hidden="true"><use href="#i-medaille"/></svg></span><b data-champ="produit.picto.1">Lorem ipsum</b></li>
+          <li><span><svg aria-hidden="true"><use href="#i-eclair"/></svg></span><b data-champ="produit.picto.2">Dolor sit</b></li>
+          <li><span><svg aria-hidden="true"><use href="#i-flocon"/></svg></span><b data-champ="produit.picto.3">Amet elit</b></li>
+          <li><span><svg aria-hidden="true"><use href="#i-feuille"/></svg></span><b data-champ="produit.picto.4">Sed do</b></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. LE PRODUIT -->
-  <section id="produit" class="produit papier" aria-labelledby="h-produit">
-    <div class="wrap grille">
-      <div class="visuel rv" aria-hidden="true">
-        <div class="rond"></div>
-        <svg class="tube" viewBox="0 0 1000 200"><use href="#tube"/></svg>
-        <div class="ml">100&nbsp;ml<small>1 tube = 1 glace</small></div>
-      </div>
-      <div class="rv">
-        <p class="label muted">Le produit</p>
-        <h2 id="h-produit" class="titre">Un tube.<br>100 ml.<br>8&nbsp;<span style="text-transform:none">g</span>.</h2>
-        <p class="lead">Un tube transparent, une étiquette imprimée en blanc directement dessus. La glace se voit au travers : ce que vous voyez, c'est ce que vous mangez.</p>
-        <p>Glace à l'eau protéinée, édulcorée au sucralose et à la stévia, avec des électrolytes ajoutés. Elle se glisse dans le congélateur de la salle, du club ou de la maison.</p>
-        <div class="parfum">
-          <span class="pt" aria-hidden="true"></span>
-          <div><span class="label">Parfum de lancement</span><strong>Orange sanguine</strong></div>
-        </div>
-        <p class="note">D'autres parfums arrivent. Suivez <a href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">@iceproteine</a> pour les découvrir en premier.</p>
-        <div class="cinq">
-          <div class="n">5<small>&nbsp;MIN</small></div>
-          <p class="main">Attendre 5 min avant de déguster pour un plaisir intense.</p>
+        <ul class="coches">
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="produit.point.1">Lorem ipsum dolor sit amet</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="produit.point.2">Consectetur adipiscing elit</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="produit.point.3">Sed do eiusmod tempor</span></li>
+        </ul>
+        <div class="prix">
+          <div><small data-champ="produit.prix.mention">À PARTIR DE</small><strong data-champ="produit.prix">XX,XX €</strong></div>
+          <div class="actions">
+            <a class="btn btn-n" href="#inscription"><span data-champ="produit.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
+            <a class="btn btn-l" href="#pourquoi" data-champ="produit.bouton-2">Dolor sit</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Motif tee-shirt -->
-  <section class="fuel" aria-label="Fuel your next level">
-    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
-    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
-    <span class="ligne plein">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
-    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
-  </section>
-
-  <!-- 4. POUR QUI -->
-  <section id="pour-qui" class="qui papier" aria-labelledby="h-qui">
+  <!-- 5. INSCRIPTION COMMUNAUTÉ -->
+  <section id="inscription" class="inscr" aria-labelledby="h-inscr">
+    <div class="visuel-ph" aria-hidden="true"><span class="mention">Photo à fournir</span></div>
     <div class="wrap">
-      <div class="intro rv">
-        <div>
-          <p class="label muted">Pour qui</p>
-          <h2 id="h-qui" class="titre" style="margin-top:14px">Same energy.<br>Different goals.</h2>
-        </div>
-        <div>
-          <p class="lead">Pour les sportifs qui veulent finir la séance sur une note fraîche. Que vous soulevez, couriez ou jouiez en équipe, la fin d'effort a un nouveau goût.</p>
-          <div class="sports"><span class="pastille">Salle</span><span class="pastille">Running</span><span class="pastille">Sports collectifs</span></div>
-        </div>
-      </div>
-      <div class="tri">
-        <article class="rv">
-          <span class="num" aria-hidden="true">01</span>
-          <svg class="picto" aria-hidden="true"><use href="#i-eclair"/></svg>
-          <h3><u>Énergie</u></h3>
-          <p>Des électrolytes ajoutés et un shot de fraîcheur, juste après l'effort.</p>
-        </article>
-        <article class="noir rv">
-          <span class="num" aria-hidden="true">02</span>
-          <svg class="picto" aria-hidden="true"><use href="#i-medaille"/></svg>
-          <h3><u>Récupération</u></h3>
-          <p>8 g de protéines de lactosérum par glace, prêtes à déguster en sortant de séance.</p>
-        </article>
-        <article class="rv">
-          <span class="num" aria-hidden="true">03</span>
-          <svg class="picto" aria-hidden="true"><use href="#i-coeur"/></svg>
-          <h3><u>Plaisir</u></h3>
-          <p>Le goût d'une vraie glace à l'eau. Sans sucres, sans matières grasses, sans aspartame.</p>
-        </article>
+      <div class="carte-verre rv">
+        <span class="puce" data-champ="inscription.surtitre">Lorem ipsum</span>
+        <h2 id="h-inscr" class="h2" data-champ="inscription.titre">Lorem ipsum dolor <em>sit amet</em></h2>
+        <p class="chapo" data-champ="inscription.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form class="form" novalidate>
+          <label class="sr" for="f-email">Adresse e-mail</label>
+          <input id="f-email" type="email" name="email" placeholder="Votre adresse e-mail" autocomplete="email" required>
+          <label class="sr" for="f-tel">Numéro de mobile</label>
+          <input id="f-tel" type="tel" name="tel" placeholder="Votre numéro de mobile" autocomplete="tel">
+          <label class="ok"><input type="checkbox" name="consentement" required><span data-champ="inscription.consentement">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></label>
+          <button class="btn btn-n" type="submit"><span data-champ="inscription.bouton">Lorem ipsum dolor</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></button>
+          <p class="retour" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- 5. INGRÉDIENTS ET VALEURS NUTRITIONNELLES -->
-  <section id="nutrition" class="nutri" aria-labelledby="h-nutri">
-    <div class="wrap grille">
-      <div class="rv">
-        <p class="label muted">Orange sanguine</p>
-        <h2 id="h-nutri" class="titre" style="font-size:clamp(2.4rem,5.2vw,4.2rem)">Ingrédients et valeurs nutritionnelles</h2>
-        <p class="ingr"><span class="label" style="display:block;margin-bottom:8px">Ingrédients</span>
-          Eau, hydrolysat de protéines de <strong>LACTOSÉRUM</strong>, correcteur d'acidité (acide phosphorique), arômes, concentré de carotte et d'orange sanguine, sel, colorant (caroténoïdes), édulcorants (sucralose, glycosides de stéviol issus de stevia), électrolytes.</p>
-        <p class="allerg"><svg class="picto" style="width:26px;height:26px" aria-hidden="true"><use href="#i-goutte"/></svg>Allergène : lait (lactosérum)</p>
-        <p class="note">La liste des ingrédients varie selon le parfum.</p>
+  <!-- 6. PROFILS -->
+  <section class="profils sec" aria-labelledby="h-profils">
+    <div class="wrap">
+      <div class="tete rv">
+        <h2 id="h-profils" class="h2" data-champ="profils.titre">Lorem ipsum, dolor <em>sit amet</em></h2>
+        <p class="chapo" data-champ="profils.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="vn rv">
-        <div class="vn-h"><h3>Valeurs nutritionnelles</h3><span>Pour 100 ml<br>soit 1 tube</span></div>
+      <div class="cartes">
+        <article class="carte rv on"><span class="n">01</span><h3 data-champ="profils.1.titre">Lorem ipsum</h3><p data-champ="profils.1.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></article>
+        <article class="carte rv"><span class="n">02</span><h3 data-champ="profils.2.titre">Dolor sit amet</h3><p data-champ="profils.2.texte">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></article>
+        <article class="carte rv"><span class="n">03</span><h3 data-champ="profils.3.titre">Consectetur elit</h3><p data-champ="profils.3.texte">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+        <article class="carte rv"><span class="n">04</span><h3 data-champ="profils.4.titre">Sed do eiusmod</h3><p data-champ="profils.4.texte">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p></article>
+        <article class="carte rv"><span class="n">05</span><h3 data-champ="profils.5.titre">Tempor incididunt</h3><p data-champ="profils.5.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></article>
+        <article class="carte rv"><span class="n">06</span><h3 data-champ="profils.6.titre">Ut labore et</h3><p data-champ="profils.6.texte">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></article>
+        <article class="carte rv"><span class="n">07</span><h3 data-champ="profils.7.titre">Dolore magna</h3><p data-champ="profils.7.texte">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+        <article class="carte rv"><span class="n">08</span><h3 data-champ="profils.8.titre">Aliqua ut enim</h3><p data-champ="profils.8.texte">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. POURQUOI -->
+  <section id="pourquoi" class="pourquoi sec" aria-labelledby="h-pourquoi">
+    <div class="wrap grille">
+      <div class="photo-ph rv"><svg class="tube" viewBox="0 0 1000 200" aria-hidden="true"><use href="#tube"/></svg><span class="mention">Photo à fournir</span></div>
+      <div class="rv">
+        <span class="puce" data-champ="pourquoi.surtitre">Lorem ipsum</span>
+        <h2 id="h-pourquoi" class="h2" data-champ="pourquoi.titre">Lorem ipsum dolor</h2>
+        <p class="chapo" data-champ="pourquoi.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul class="coches deux">
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.1">Lorem ipsum dolor</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.2">Sit amet consectetur</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.3">Adipiscing elit sed</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.4">Do eiusmod tempor</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.5">Incididunt ut labore</span></li>
+          <li><i><svg aria-hidden="true"><use href="#i-check"/></svg></i><span data-champ="pourquoi.point.6">Et dolore magna</span></li>
+        </ul>
+        <div class="trio">
+          <article><span class="puce" data-champ="pourquoi.rond.1.etiquette">Lorem</span><h3 data-champ="pourquoi.rond.1.titre">Ipsum</h3><p data-champ="pourquoi.rond.1.texte">Lorem ipsum dolor sit amet, consectetur adipiscing.</p></article>
+          <article><span class="puce" data-champ="pourquoi.rond.2.etiquette">Dolor</span><h3 data-champ="pourquoi.rond.2.titre">Sit amet</h3><p data-champ="pourquoi.rond.2.texte">Lorem ipsum dolor sit amet, consectetur adipiscing.</p></article>
+          <article><span class="puce" data-champ="pourquoi.rond.3.etiquette">Elit</span><h3 data-champ="pourquoi.rond.3.titre">Sed do</h3><p data-champ="pourquoi.rond.3.texte">Lorem ipsum dolor sit amet, consectetur adipiscing.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROTÉINES 101 -->
+  <section id="proteines-101" class="sombre c101 sec" aria-labelledby="h-101">
+    <div class="wrap">
+      <div class="tete rv">
+        <div>
+          <p class="label" data-champ="c101.surtitre">Protéines 101</p>
+          <h2 id="h-101" class="h2" data-champ="c101.titre">Lorem ipsum, dolor <em>sit amet</em>.</h2>
+        </div>
+        <div>
+          <p class="chapo" data-champ="c101.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="actions"><a class="btn btn-b" href="#faq"><span data-champ="c101.bouton">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a></div>
+        </div>
+      </div>
+      <div class="quatre rv">
+        <article><span class="n">01</span><h3 data-champ="c101.1.titre">Lorem ipsum</h3><p data-champ="c101.1.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></article>
+        <article><span class="n">02</span><h3 data-champ="c101.2.titre">Dolor sit amet</h3><p data-champ="c101.2.texte">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></article>
+        <article><span class="n">03</span><h3 data-champ="c101.3.titre">Consectetur elit</h3><p data-champ="c101.3.texte">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+        <article><span class="n">04</span><h3 data-champ="c101.4.titre">Sed do eiusmod</h3><p data-champ="c101.4.texte">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. COMPARATIF -->
+  <section class="sombre comp sec" aria-labelledby="h-comp">
+    <div class="wrap">
+      <div class="tete rv">
+        <h2 id="h-comp" class="h2" data-champ="comparatif.titre">Lorem ipsum dolor sit amet</h2>
+        <p class="chapo" data-champ="comparatif.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="table-wrap rv">
         <table>
-          <caption class="sr">Valeurs nutritionnelles pour 100 ml, soit un tube</caption>
+          <caption class="sr">Comparatif ICEPROT</caption>
+          <thead><tr><th scope="col"><span class="sr">Critère</span></th><th scope="col" class="ice">ICEPROT</th><th scope="col" data-champ="comparatif.colonne.2">Lorem ipsum</th><th scope="col" data-champ="comparatif.colonne.3">Dolor sit</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Énergie</th><td>50 kJ / 12 kcal</td></tr>
-            <tr><th scope="row">Matières grasses</th><td>0 g</td></tr>
-            <tr class="sub"><th scope="row">dont acides gras saturés</th><td>0 g</td></tr>
-            <tr><th scope="row">Glucides</th><td>0,5 g</td></tr>
-            <tr class="sub"><th scope="row">dont sucres</th><td>0 g</td></tr>
-            <tr class="prot"><th scope="row">Protéines</th><td>8 g</td></tr>
-            <tr><th scope="row">Sel</th><td>0,12 g</td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.1">Lorem ipsum dolor</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><span class="non" aria-label="Non">—</span></td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.2">Sit amet consectetur</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><span class="non" aria-label="Non">—</span></td><td><svg aria-label="Oui"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.3">Adipiscing elit</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><span class="non" aria-label="Non">—</span></td><td>Partiel</td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.4">Sed do eiusmod tempor</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><span class="non" aria-label="Non">—</span></td><td><span class="non" aria-label="Non">—</span></td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.5">Incididunt ut labore</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td>Partiel</td><td>Partiel</td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.6">Et dolore magna aliqua</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><span class="non" aria-label="Non">—</span></td><td><span class="non" aria-label="Non">—</span></td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.7">Ut enim ad minim</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><svg aria-label="Oui"><use href="#i-check"/></svg></td><td><svg aria-label="Oui"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row" data-champ="comparatif.ligne.8">Quis nostrud exercitation</th><td class="ice"><svg aria-label="Oui"><use href="#i-check"/></svg></td><td>Partiel</td><td>Partiel</td></tr>
           </tbody>
         </table>
-        <p class="conserv">À conserver au congélateur. Attendre 5 min avant de déguster pour un plaisir intense.</p>
       </div>
+      <div class="actions rv"><a class="btn btn-b" href="#produit"><span data-champ="comparatif.bouton">Lorem ipsum dolor</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a></div>
     </div>
   </section>
 
-  <!-- 6. OÙ NOUS TROUVER -->
-  <section id="trouver" class="trouver papier" aria-labelledby="h-trouver">
-    <div class="wrap grille">
-      <div class="rv">
-        <p class="label muted">Où nous trouver</p>
-        <h2 id="h-trouver" class="titre">Lancement en cours.</h2>
-        <p class="lead">Les premiers points de vente et nos prochains événements sont annoncés sur Instagram. Retrouvez notre stand au bord des terrains, des pistes et des salles.</p>
-        <ul class="etapes">
-          <li><b>01</b><span>Vous êtes une salle de sport, un club ou un commerce&nbsp;? Proposez ICEPROT à vos adhérents.</span></li>
-          <li><b>02</b><span>Vous organisez un événement sportif&nbsp;? Invitez notre stand.</span></li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-o" href="https://ig.me/m/iceproteine" target="_blank" rel="noopener">Nous écrire <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
-          <a class="btn btn-l" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Voir les événements</a>
-        </div>
-      </div>
-      <div class="rv">
-        <div class="stand" aria-hidden="true">
-          <p class="fuel-s">Fuel<br>your<br>next<br>level</p>
-          <svg class="logo" viewBox="0 -12 4152 1137" fill="currentColor"><use href="#logo-bl"/></svg>
-          <p class="main">Glace à l'eau protéinée</p>
-        </div>
-        <p class="stand-legende">Notre stand : repérez le panneau noir.</p>
-      </div>
+  <!-- 10. FAQ -->
+  <section id="faq" class="faq sec" aria-labelledby="h-faq">
+    <div class="wrap">
+      <h2 id="h-faq" class="h2 rv" data-champ="faq.titre">Lorem ipsum, <em>dolor</em>.</h2>
+      <details class="rv" open><summary><span data-champ="faq.1.question">Lorem ipsum dolor sit amet ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.1.reponse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></details>
+      <details class="rv"><summary><span data-champ="faq.2.question">Consectetur adipiscing elit sed do ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.2.reponse">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></details>
+      <details class="rv"><summary><span data-champ="faq.3.question">Eiusmod tempor incididunt ut labore ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.3.reponse">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p></details>
+      <details class="rv"><summary><span data-champ="faq.4.question">Et dolore magna aliqua ut enim ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.4.reponse">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></details>
+      <details class="rv"><summary><span data-champ="faq.5.question">Quis nostrud exercitation ullamco ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.5.reponse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></details>
     </div>
   </section>
 
-  <!-- 7. INSTAGRAM -->
-  <section id="instagram" class="insta" aria-labelledby="h-insta">
-    <div class="wrap grille">
-      <div class="rv">
-        <p class="label">Psst… Nouveau produit…</p>
-        <h2 id="h-insta" class="titre" style="margin-top:14px">Follow us</h2>
-        <a class="handle" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">@iceproteine</a>
-        <p class="tease">Nouveaux parfums, points de vente, événements : tout se passe d'abord sur Instagram.</p>
-        <div class="actions">
-          <a class="btn btn-n" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Suivre sur Instagram</a>
-        </div>
+  <!-- 11. APPEL FINAL -->
+  <section class="sombre final sec" aria-labelledby="h-final">
+    <div class="wrap rv">
+      <div class="badge" aria-hidden="true">
+        <svg class="txt" viewBox="0 0 130 130"><defs><path id="cercle-txt" d="M65 65m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text fill="#fff" style="font:700 12.4px 'Barlow Condensed',sans-serif;letter-spacing:.2em"><textPath href="#cercle-txt" textLength="312" lengthAdjust="spacing">8 G PROTÉINES · 0 G SUCRES · COLD NUTRITION ·</textPath></text></svg>
+        <div class="coeur"></div>
       </div>
-      <div class="qr rv">
-        <svg viewBox="-2 -2 33 33" role="img" aria-label="QR code vers le compte Instagram @iceproteine"><path fill="#17130A" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM11 0h1v1h-1zM13 0h1v1h-1zM14 0h1v1h-1zM17 0h1v1h-1zM18 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM14 2h1v1h-1zM16 2h1v1h-1zM19 2h1v1h-1zM20 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM10 4h1v1h-1zM13 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM19 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM16 5h1v1h-1zM17 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM4 9h1v1h-1zM8 9h1v1h-1zM12 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM9 10h1v1h-1zM10 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM11 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM21 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM0 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM28 12h1v1h-1zM1 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM15 14h1v1h-1zM17 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM10 15h1v1h-1zM11 15h1v1h-1zM12 15h1v1h-1zM13 15h1v1h-1zM14 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM23 15h1v1h-1zM24 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM0 16h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM9 16h1v1h-1zM10 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM0 17h1v1h-1zM3 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM21 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM18 18h1v1h-1zM19 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM25 18h1v1h-1zM28 18h1v1h-1zM0 19h1v1h-1zM2 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM24 19h1v1h-1zM0 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM17 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM25 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM13 22h1v1h-1zM14 22h1v1h-1zM15 22h1v1h-1zM17 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM13 23h1v1h-1zM15 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM19 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM25 25h1v1h-1zM26 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM12 26h1v1h-1zM13 26h1v1h-1zM14 26h1v1h-1zM15 26h1v1h-1zM22 26h1v1h-1zM23 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM10 27h1v1h-1zM12 27h1v1h-1zM16 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM25 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM15 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM23 28h1v1h-1zM24 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1z"/></svg>
-        <span class="label">Follow us @iceproteine</span>
+      <h2 id="h-final" class="h2" data-champ="final.titre">Lorem <em>ipsum</em></h2>
+      <p class="chapo" data-champ="final.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <div class="actions">
+        <a class="btn btn-b" href="#produit"><span data-champ="final.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
+        <a class="btn btn-l" href="#proteines-101" data-champ="final.bouton-2">Dolor sit</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- 8. PIED DE PAGE -->
+<!-- 12. PIED DE PAGE -->
 <footer class="pied">
   <div class="wrap">
-    <div class="haut">
-      <svg class="logo" viewBox="0 -12 4152 1137" fill="currentColor" role="img" aria-label="ICEPROT — Cold Nutrition"><use href="#logo-bl"/></svg>
-      <p class="sig">Cold nutrition<br>for a <span>better you.</span></p>
+    <div class="cols">
+      <div><h2>Boutique</h2><ul><li><a href="#produit">Lorem ipsum</a></li><li><a href="#produit">Tout voir</a></li></ul></div>
+      <div><h2>Comprendre</h2><ul><li><a href="#pourquoi">Pourquoi ICEPROT</a></li><li><a href="#proteines-101">Protéines 101</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h2>La marque</h2><ul><li><a href="https://ig.me/m/iceproteine">Contact</a></li><li><a href="#">Devenir revendeur</a></li><li><a href="#">Événements</a></li></ul></div>
+      <div><h2>Informations</h2><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="#">CGV</a></li><li><a href="#">Livraison et retours</a></li><li><a href="#">Confidentialité</a></li></ul></div>
+      <div><h2>Suivez-nous</h2><div class="reseaux"><a href="https://www.instagram.com/iceproteine" aria-label="Instagram @iceproteine"><svg aria-hidden="true"><use href="#i-insta"/></svg></a></div></div>
     </div>
-    <div class="bas">
-      <span>Marque française</span>
-      <ul>
-        <li><a href="mentions-legales.html">Mentions légales</a></li>
-        <li><a href="https://ig.me/m/iceproteine" target="_blank" rel="noopener">Contact</a></li>
-        <li><a href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-      <span>© <span id="annee">2026</span> ICEPROT</span>
-    </div>
+    <div class="legal"><span>© <span id="annee">2026</span> ICEPROT. Tous droits réservés.</span><span>Marque française</span><span data-champ="pied.mention">Lorem ipsum dolor sit amet</span></div>
+  </div>
+  <div class="geant">
+    <p class="sig">8 g de protéines · 0 g de sucres · Cold nutrition</p>
+    <svg viewBox="0 -12 4152 730" fill="currentColor" role="img" aria-label="ICEPROT"><use href="#wm"/></svg>
   </div>
 </footer>
 
 <script>
   document.getElementById('annee').textContent = new Date().getFullYear();
+
+  // Révélation au défilement
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     }), { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
-  } else {
-    document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
-  }
+  } else document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+
+  // Vidéo : pause / lecture, et respect de « réduire les animations »
+  const video = document.getElementById('video-hero');
+  const bouton = document.querySelector('.hero .lecture');
+  const majBouton = () => {
+    const pause = video.paused;
+    bouton.querySelector('span').textContent = pause ? 'Lecture' : 'Pause';
+    bouton.setAttribute('aria-label', pause ? 'Lire la vidéo' : 'Mettre la vidéo en pause');
+    bouton.querySelector('.pz').setAttribute('d', pause ? 'M2 1l9 5-9 5z' : 'M2 1h3v10H2zM7 1h3v10H7z');
+  };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) video.pause();
+  bouton.addEventListener('click', () => { video.paused ? video.play() : video.pause(); });
+  video.addEventListener('play', majBouton); video.addEventListener('pause', majBouton); majBouton();
+
+  // Sous-menu Boutique
+  const bt = document.querySelector('[aria-controls="sous-boutique"]'), sous = document.getElementById('sous-boutique');
+  bt.addEventListener('click', e => { e.stopPropagation(); const o = sous.classList.toggle('ouvert'); bt.setAttribute('aria-expanded', o); });
+  document.addEventListener('click', e => { if (!sous.contains(e.target)) { sous.classList.remove('ouvert'); bt.setAttribute('aria-expanded', false); } });
+
+  // Menu mobile
+  const tiroir = document.getElementById('tiroir'), burger = document.querySelector('.burger');
+  const tir = o => { tiroir.classList.toggle('ouvert', o); burger.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; };
+  burger.addEventListener('click', () => tir(true));
+  tiroir.addEventListener('click', e => { if (e.target.closest('a,.fermer')) tir(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') tir(false); });
+
+  // FAQ : une seule question ouverte à la fois
+  document.querySelectorAll('.faq details').forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('.faq details').forEach(o => { if (o !== d) o.open = false; });
+  }));
+
+  // Formulaire : pas encore branché à un service d'e-mailing
+  document.querySelector('.form').addEventListener('submit', e => {
+    e.preventDefault();
+    e.target.querySelector('.retour').textContent = 'Formulaire de démonstration : inscription pas encore active.';
+  });
 </script>
 </body>
 </html>
