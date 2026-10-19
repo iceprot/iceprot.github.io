@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICEPROT — Glace à l'eau protéinée</title>
+<meta name="description" content="ICEPROT, la glace à l'eau protéinée : 8 g de protéines, 0 g de sucres, 0 g de matières grasses, sans aspartame. Cold nutrition, marque française.">
+<meta name="theme-color" content="#17130A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ICEPROT — Post workout game changer.">
+<meta property="og:description" content="La glace à l'eau protéinée pour les sportifs. 8 g de protéines, 0 g de sucres, 0 g de matières grasses.">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#F2700A; --orange-vif:#FF8A1E; --orange-brule:#D65A00;
+  --beige:#E1DBCE; --beige-clair:#ECE6DB;
+  --noir-chaud:#17130A; --noir:#141414;
+  --taupe:#6B6255; --gris:#8A8378; --sable:#C9C0B2; --blanc:#FFFFFF;
+  --f-logo:'Poppins',sans-serif; --f-affiche:'Anton','Helvetica Neue',sans-serif;
+  --f-label:'Barlow Condensed',sans-serif; --f-texte:'Barlow',sans-serif; --f-main:'Caveat',cursive;
+  --gutter:clamp(16px,5vw,64px); --max:1240px;
+  --papier:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .09 0 0 0 0 .07 0 0 0 0 .04 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--beige);color:var(--noir-chaud);font:400 1.0625rem/1.5 var(--f-texte);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.papier{position:relative;isolation:isolate}
+.papier::before{content:"";position:absolute;inset:0;background:var(--papier);opacity:.16;pointer-events:none;z-index:-1}
+
+/* typographie */
+.label{font:700 .875rem/1.2 var(--f-label);letter-spacing:.2em;text-transform:uppercase}
+.titre{font:400 clamp(2.6rem,7vw,5.25rem)/.88 var(--f-affiche);text-transform:uppercase;letter-spacing:.005em}
+.titre-p{font:800 clamp(2rem,4.6vw,3.4rem)/1 var(--f-logo);text-transform:uppercase;letter-spacing:-.035em}
+.filet{display:block;width:72px;height:4px;background:currentColor;margin:22px 0 0}
+.main{font:500 clamp(1.6rem,3vw,2.1rem)/1.05 var(--f-main);transform:rotate(-8deg);display:inline-block}
+.lead{font-size:1.1875rem;max-width:34em}
+.muted{color:var(--taupe)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 26px;border-radius:999px;font:700 1rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-o{background:var(--orange);color:var(--noir-chaud)}
+.btn-o:hover{background:var(--orange-vif)}
+.btn-l{border-color:currentColor}
+.btn-l:hover{background:var(--noir-chaud);color:var(--blanc);border-color:var(--noir-chaud)}
+.sombre .btn-l:hover{background:var(--blanc);color:var(--noir-chaud);border-color:var(--blanc)}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* en-tête */
+.top{position:sticky;top:0;z-index:20;background:var(--noir-chaud);color:var(--blanc)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.top .logo{width:150px;color:var(--blanc)}
+.nav{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav a{font:600 .9375rem/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;opacity:.8}
+.nav a:hover{opacity:1;color:var(--orange-vif)}
+.top .btn{min-height:40px;padding:0 18px;font-size:.875rem}
+@media (max-width:900px){.nav{display:none}}
+
+/* hero */
+.hero{overflow:hidden;padding:clamp(40px,7vw,96px) 0 clamp(72px,10vw,140px)}
+.hero .bg08{position:absolute;z-index:-1;right:-4vw;top:50%;transform:translateY(-52%);font:800 clamp(22rem,52vw,46rem)/.8 var(--f-logo);letter-spacing:-.06em;color:var(--orange);opacity:.95;user-select:none}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+.hero .logo-hero{width:min(300px,62vw);color:var(--noir-chaud);margin-bottom:clamp(28px,4vw,48px)}
+.hero .descr{margin-bottom:18px;color:var(--noir-chaud)}
+.hero h1{font:400 clamp(3.4rem,9.6vw,8.4rem)/.87 var(--f-affiche);text-transform:uppercase;letter-spacing:.005em}
+.hero .lead{margin-top:28px;max-width:28em}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.pinceau{position:relative;display:inline-block;margin-top:40px;padding:14px 34px 18px 26px;color:var(--noir-chaud)}
+.pinceau svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;transform:rotate(-8deg)}
+.pinceau .main{transform:rotate(-8deg)}
+.hero .tube-zone{position:relative;min-height:420px;display:grid;place-items:center}
+.hero .tube{width:min(640px,118%);transform:rotate(-24deg);filter:drop-shadow(0 30px 30px rgba(23,19,10,.28))}
+@media (max-width:900px){
+  .hero .grid{grid-template-columns:1fr}
+  .hero .tube-zone{min-height:0;margin:24px -10% 0}
+  .hero .tube{width:100%;transform:rotate(-14deg)}
+  .hero .bg08{top:auto;bottom:2%;transform:none;right:-10vw;font-size:clamp(16rem,70vw,30rem)}
+}
+
+/* bloc noir coupé en biais */
+.sombre{background:var(--noir-chaud);color:var(--blanc)}
+.biais-haut{clip-path:polygon(0 clamp(40px,7vw,110px),100% 0,100% 100%,0 100%);margin-top:calc(-1 * clamp(40px,7vw,110px));padding-top:calc(clamp(40px,7vw,110px) + clamp(56px,7vw,96px))}
+
+/* chiffres */
+.chiffres{padding-bottom:clamp(64px,8vw,120px)}
+.chiffres .head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:clamp(40px,5vw,64px)}
+.chiffres .head .label{color:var(--orange-vif)}
+.chiffres .head p.muted{color:#B9B1A4;max-width:26em}
+.chiffres .grille{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.big8{display:flex;align-items:center;gap:28px}
+.big8 .n{font:800 clamp(8rem,22vw,17rem)/.8 var(--f-logo);letter-spacing:-.06em;color:var(--orange)}
+.big8 .n small{font-size:.48em;letter-spacing:-.04em}
+.big8 .t{font:700 clamp(1.4rem,2.6vw,2rem)/1.05 var(--f-label);letter-spacing:.12em;text-transform:uppercase}
+.big8 .t span{display:block;font:500 1rem/1.4 var(--f-texte);letter-spacing:0;text-transform:none;color:#B9B1A4;margin-top:10px;max-width:16em}
+.args{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.args li{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)}
+.args li:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.picto{width:56px;height:56px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.args .k{font:700 1.25rem/1.1 var(--f-label);letter-spacing:.14em;text-transform:uppercase}
+.pastille{display:inline-flex;align-items:center;min-height:34px;padding:0 16px;border:1.5px solid currentColor;border-radius:999px;font:700 .9375rem/1 var(--f-label);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.pastille.v{text-transform:none;letter-spacing:.08em;font-size:1.0625rem}
+.pastille.o{border-color:var(--orange);color:var(--orange-vif)}
+@media (max-width:900px){.chiffres .grille{grid-template-columns:1fr}}
+@media (max-width:420px){.args li{grid-template-columns:48px 1fr;row-gap:8px}.args .pastille{grid-column:2;justify-self:start}.picto{width:46px;height:46px}.big8{flex-direction:column;align-items:flex-start;gap:12px}}
+
+/* produit */
+.produit{background:var(--beige-clair);padding:clamp(72px,9vw,130px) 0}
+.produit .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.produit .visuel{position:relative;display:grid;place-items:center;aspect-ratio:1/1;max-width:560px;width:100%;margin:0 auto}
+.produit .visuel .rond{position:absolute;inset:6%;border-radius:50%;background:var(--noir-chaud)}
+.produit .visuel .ml{position:absolute;z-index:1;left:0;bottom:4%;background:var(--orange);padding:16px 20px 14px;border-radius:16px;font:800 clamp(2.2rem,4.6vw,3.4rem)/.8 var(--f-logo);letter-spacing:-.05em;color:var(--noir-chaud)}
+.produit .visuel .ml small{display:block;font:700 .875rem/1 var(--f-label);letter-spacing:.2em;margin-top:10px}
+.produit .visuel .tube{position:relative;width:112%;max-width:none;transform:rotate(-30deg);filter:drop-shadow(0 24px 24px rgba(23,19,10,.25))}
+.produit h2{margin:14px 0 22px}
+.produit p+p{margin-top:14px}
+.parfum{margin-top:30px;display:flex;align-items:center;gap:18px;padding:18px 22px;background:var(--blanc);border:1px solid var(--sable);border-radius:18px}
+.parfum .pt{width:46px;height:46px;flex:none;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FF8A1E,#D63A12 70%);box-shadow:inset 0 0 0 3px rgba(255,255,255,.55)}
+.parfum .label{color:var(--taupe);font-size:.8125rem}
+.parfum strong{display:block;font:700 1.5rem/1.1 var(--f-label);letter-spacing:.08em;text-transform:uppercase}
+.cinq{margin-top:26px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.cinq .n{font:800 3.6rem/.85 var(--f-logo);letter-spacing:-.05em}
+.cinq .n small{font-size:.42em;letter-spacing:.02em}
+.cinq .main{font-size:1.75rem;max-width:13em;transform:rotate(-4deg)}
+@media (max-width:900px){.produit .grille{grid-template-columns:1fr}.produit .visuel{max-width:440px}}
+
+/* fuel your next level */
+.fuel{overflow:hidden;padding:clamp(48px,6vw,80px) 0;background:var(--noir);color:var(--blanc)}
+.fuel .ligne{display:block;white-space:nowrap;font:400 clamp(3rem,9vw,7.5rem)/.92 var(--f-affiche);text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--orange);letter-spacing:.01em}
+.fuel .ligne.plein{color:var(--orange);-webkit-text-stroke:0}
+.fuel .ligne:nth-child(even){transform:translateX(-14%)}
+@media (prefers-reduced-motion:no-preference){.fuel .ligne{animation:defile 38s linear infinite}.fuel .ligne:nth-child(even){animation-direction:reverse}}
+@keyframes defile{from{translate:0 0}to{translate:-25% 0}}
+
+/* pour qui */
+.qui{padding:clamp(72px,9vw,130px) 0}
+.qui .intro{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sports{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.sports .pastille{border-color:var(--noir-chaud)}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
+.tri article{position:relative;background:var(--blanc);border:1px solid var(--sable);border-radius:22px;padding:30px 28px 32px;overflow:hidden;isolation:isolate}
+.tri article .num{position:absolute;right:14px;top:-8px;z-index:-1;font:800 9rem/1 var(--f-logo);letter-spacing:-.06em;color:var(--beige-clair)}
+.tri h3{font:400 2.6rem/.9 var(--f-affiche);text-transform:uppercase;margin:18px 0 12px}
+.tri h3 u{text-decoration:none;box-shadow:inset 0 -.18em 0 var(--orange)}
+.tri .picto{width:52px;height:52px}
+.tri p{color:var(--taupe)}
+.tri article.noir{background:var(--noir-chaud);border-color:var(--noir-chaud);color:var(--blanc)}
+.tri article.noir .num{color:#2A2419}
+.tri article.noir p{color:#C9C0B2}
+@media (max-width:900px){.qui .intro{grid-template-columns:1fr}.tri{grid-template-columns:1fr}}
+
+/* ingrédients */
+.nutri{background:var(--beige-clair);padding:clamp(72px,9vw,130px) 0}
+.nutri .grille{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:start}
+.nutri h2{margin:14px 0 26px}
+.ingr{font-size:1.125rem}
+.ingr strong{font-weight:700;letter-spacing:.02em}
+.note{margin-top:20px;font-size:.9375rem;color:var(--taupe)}
+.allerg{margin-top:22px;display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1.5px solid var(--noir-chaud);border-radius:999px;font:700 .9375rem/1.1 var(--f-label);letter-spacing:.12em;text-transform:uppercase}
+.vn{background:var(--blanc);border:2px solid var(--noir-chaud);border-radius:6px;padding:22px 24px 18px}
+.vn .vn-h{display:flex;justify-content:space-between;align-items:end;gap:16px;border-bottom:8px solid var(--noir-chaud);padding-bottom:12px}
+.vn .vn-h h3{font:800 1.5rem/1 var(--f-logo);text-transform:uppercase;letter-spacing:-.02em}
+.vn .vn-h span{font:600 .875rem/1.2 var(--f-label);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);text-align:right}
+.vn table{width:100%;border-collapse:collapse;font-size:1.0625rem}
+.vn th,.vn td{padding:11px 0;border-bottom:1px solid var(--sable);text-align:left;font-weight:500}
+.vn td{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.vn tr.sub th{padding-left:18px;font-weight:400;color:var(--taupe)}
+.vn tr.sub td{font-weight:400}
+.vn tr.prot th,.vn tr.prot td{font:800 1.375rem/1 var(--f-logo);letter-spacing:-.02em;border-bottom:4px solid var(--noir-chaud);padding:16px 0}
+.vn tr:last-child th,.vn tr:last-child td{border-bottom:0}
+.vn .conserv{margin-top:14px;padding-top:14px;border-top:1px solid var(--sable);font-size:.9375rem;color:var(--taupe)}
+@media (max-width:900px){.nutri .grille{grid-template-columns:1fr}}
+
+/* où nous trouver */
+.trouver{padding:clamp(72px,9vw,130px) 0}
+.trouver .grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.trouver h2{margin:14px 0 22px}
+.trouver .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.stand{position:relative;background:var(--noir);color:var(--blanc);border-radius:6px;aspect-ratio:120/35;display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;padding:0 5%;box-shadow:0 30px 50px -24px rgba(23,19,10,.55)}
+.stand .fuel-s{font:400 clamp(.9rem,2.1vw,1.55rem)/.9 var(--f-affiche);text-transform:uppercase;color:var(--orange)}
+.stand .logo{width:100%;color:var(--blanc)}
+.stand .main{justify-self:end;font-size:clamp(.95rem,2.1vw,1.55rem);text-align:right;transform:rotate(-8deg)}
+.stand-legende{margin-top:16px;font-size:.9375rem;color:var(--taupe)}
+.etapes{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
+.etapes li{display:flex;gap:16px;align-items:baseline}
+.etapes b{font:800 1.125rem/1 var(--f-logo);color:var(--noir-chaud);min-width:2.2em}
+@media (max-width:900px){.trouver .grille{grid-template-columns:1fr}}
+
+/* instagram */
+.insta{background:var(--orange);color:var(--noir-chaud);overflow:hidden;padding:clamp(72px,9vw,120px) 0}
+.insta .grille{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,80px);align-items:center}
+.insta .titre{font-size:clamp(3.4rem,10vw,8rem)}
+.insta .handle{display:block;font:800 clamp(1.6rem,4.4vw,3rem)/1 var(--f-logo);letter-spacing:-.035em;margin-top:18px;text-decoration:none;word-break:break-word}
+.insta .handle:hover{color:var(--blanc)}
+.insta .tease{margin-top:28px;font:500 1.25rem/1.4 var(--f-texte);max-width:26em}
+.insta .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
+.insta .btn-n{background:var(--noir-chaud);color:var(--blanc)}
+.insta .btn-n:hover{background:var(--noir)}
+.qr{justify-self:center;background:var(--blanc);border-radius:22px;padding:24px 24px 18px;width:min(300px,100%);text-align:center;transform:rotate(3deg);box-shadow:0 30px 40px -20px rgba(23,19,10,.45)}
+.qr svg{width:100%;height:auto}
+.qr .label{margin-top:14px;display:block}
+@media (max-width:900px){.insta .grille{grid-template-columns:1fr}}
+
+/* pied de page */
+.pied{background:var(--noir-chaud);color:var(--blanc);padding:clamp(56px,7vw,90px) 0 32px}
+.pied .haut{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;align-items:flex-start;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.16)}
+.pied .logo{width:220px;color:var(--blanc)}
+.pied .sig{font:400 clamp(1.8rem,4vw,2.8rem)/.95 var(--f-affiche);text-transform:uppercase;max-width:12em}
+.pied .sig span{color:var(--orange)}
+.pied .bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:24px;font:600 .875rem/1.4 var(--f-label);letter-spacing:.14em;text-transform:uppercase;color:#B9B1A4}
+.pied .bas ul{display:flex;flex-wrap:wrap;gap:22px;list-style:none;margin:0;padding:0}
+.pied .bas a{text-decoration:none}
+.pied .bas a:hover{color:var(--orange-vif)}
+
+/* apparition */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Logo vectoriel : Poppins ExtraBold vectorisé, approche −0,025 em, filet en réserve
+     du fût du I au fût du T, centré sur la barre centrale du E, épaisseur 7,5 % des capitales. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="filet-iceprot"><path clip-rule="evenodd" d="M-20 -40H4200V1200H-20ZM56 320V373H3947V320Z"/></clipPath>
+    <symbol id="wm" viewBox="0 -12 4152 730"><path clip-path="url(#filet-iceprot)" d="M252 0V705H56V0ZM666 -7Q798 -7 888 63.5Q978 134 1004 255H793Q774 215 740.5 194Q707 173 663 173Q595 173 554.5 221.5Q514 270 514 351Q514 433 554.5 481.5Q595 530 663 530Q707 530 740.5 509Q774 488 793 448H1004Q978 569 888 639.5Q798 710 666 710Q562 710 482 664.5Q402 619 358.5 537.5Q315 456 315 351Q315 247 358.5 165.5Q402 84 482 38.5Q562 -7 666 -7ZM1268 157V272H1493V421H1268V548H1523V705H1072V0H1523V157ZM1888 467H1791V705H1595V0H1888Q1973 0 2032.5 30Q2092 60 2122 113Q2152 166 2152 235Q2152 299 2122.5 351.5Q2093 404 2033.5 435.5Q1974 467 1888 467ZM1952 235Q1952 158 1869 158H1791V311H1869Q1952 311 1952 235ZM2563 705 2423 445H2402V705H2206V0H2515Q2600 0 2659 29.5Q2718 59 2748 110.5Q2778 162 2778 226Q2778 298 2738.5 352.5Q2699 407 2623 430L2782 705ZM2402 311H2499Q2539 311 2559 292Q2579 273 2579 237Q2579 203 2558.5 183.5Q2538 164 2499 164H2402ZM2818 350Q2818 246 2866.5 163.5Q2915 81 2998 35Q3081 -11 3180 -11Q3280 -11 3362.5 35Q3445 81 3493 163.5Q3541 246 3541 350Q3541 454 3493 536.5Q3445 619 3362 665.5Q3279 712 3180 712Q3081 712 2998 665.5Q2915 619 2866.5 536.5Q2818 454 2818 350ZM3342 350Q3342 266 3298.5 217.5Q3255 169 3180 169Q3104 169 3061 217.5Q3018 266 3018 350Q3018 433 3061 481.5Q3104 530 3180 530Q3255 530 3298.5 481Q3342 432 3342 350ZM4135 0V156H3947V705H3751V156H3565V0Z"/></symbol>
+    <symbol id="logo-bl" viewBox="0 -12 4152 1137"><path clip-path="url(#filet-iceprot)" d="M252 0V705H56V0ZM666 -7Q798 -7 888 63.5Q978 134 1004 255H793Q774 215 740.5 194Q707 173 663 173Q595 173 554.5 221.5Q514 270 514 351Q514 433 554.5 481.5Q595 530 663 530Q707 530 740.5 509Q774 488 793 448H1004Q978 569 888 639.5Q798 710 666 710Q562 710 482 664.5Q402 619 358.5 537.5Q315 456 315 351Q315 247 358.5 165.5Q402 84 482 38.5Q562 -7 666 -7ZM1268 157V272H1493V421H1268V548H1523V705H1072V0H1523V157ZM1888 467H1791V705H1595V0H1888Q1973 0 2032.5 30Q2092 60 2122 113Q2152 166 2152 235Q2152 299 2122.5 351.5Q2093 404 2033.5 435.5Q1974 467 1888 467ZM1952 235Q1952 158 1869 158H1791V311H1869Q1952 311 1952 235ZM2563 705 2423 445H2402V705H2206V0H2515Q2600 0 2659 29.5Q2718 59 2748 110.5Q2778 162 2778 226Q2778 298 2738.5 352.5Q2699 407 2623 430L2782 705ZM2402 311H2499Q2539 311 2559 292Q2579 273 2579 237Q2579 203 2558.5 183.5Q2538 164 2499 164H2402ZM2818 350Q2818 246 2866.5 163.5Q2915 81 2998 35Q3081 -11 3180 -11Q3280 -11 3362.5 35Q3445 81 3493 163.5Q3541 246 3541 350Q3541 454 3493 536.5Q3445 619 3362 665.5Q3279 712 3180 712Q3081 712 2998 665.5Q2915 619 2866.5 536.5Q2818 454 2818 350ZM3342 350Q3342 266 3298.5 217.5Q3255 169 3180 169Q3104 169 3061 217.5Q3018 266 3018 350Q3018 433 3061 481.5Q3104 530 3180 530Q3255 530 3298.5 481Q3342 432 3342 350ZM4135 0V156H3947V705H3751V156H3565V0Z"/><path transform="translate(263 1112)" d="M108.9 -198Q141.7 -198 166.3 -181.2Q191 -164.4 200.8 -134.7H155.7Q149 -148.7 136.8 -155.7Q124.6 -162.7 108.6 -162.7Q91.6 -162.7 78.3 -154.7Q65 -146.7 57.5 -132.2Q50.1 -117.6 50.1 -98Q50.1 -78.7 57.5 -64Q65 -49.3 78.3 -41.3Q91.6 -33.3 108.6 -33.3Q124.6 -33.3 136.8 -40.5Q149 -47.6 155.7 -61.6H200.8Q191 -31.6 166.5 -15Q142 1.7 108.9 1.7Q80.9 1.7 58.4 -11.1Q35.8 -23.8 22.8 -46.5Q9.8 -69.2 9.8 -98Q9.8 -126.8 22.8 -149.7Q35.8 -172.5 58.4 -185.2Q80.9 -198 108.9 -198ZM325.6 -98.3Q325.6 -126.8 339.1 -149.7Q352.5 -172.5 375.5 -185.4Q398.4 -198.2 425.9 -198.2Q453.6 -198.2 476.4 -185.4Q499.2 -172.5 512.5 -149.7Q525.8 -126.8 525.8 -98.3Q525.8 -69.4 512.5 -46.6Q499.2 -23.8 476.3 -10.9Q453.3 2 425.9 2Q398.4 2 375.5 -10.9Q352.5 -23.8 339.1 -46.6Q325.6 -69.4 325.6 -98.3ZM485.5 -98.3Q485.5 -117.9 478 -132.6Q470.4 -147.3 457 -155.1Q443.5 -163 425.9 -163Q408.2 -163 394.7 -155.1Q381.1 -147.3 373.5 -132.6Q366 -117.9 366 -98.3Q366 -78.7 373.5 -63.8Q381.1 -49 394.7 -41Q408.2 -33 425.9 -33Q443.5 -33 457 -41Q470.4 -49 478 -63.8Q485.5 -78.7 485.5 -98.3ZM695 -31.1H759.4V0H655.8V-195.4H695ZM1056.4 -97.4Q1056.4 -68 1043.7 -46.1Q1031 -24.1 1007.6 -12Q984.2 0 953.4 0H885.1V-195.4H953.4Q984.2 -195.4 1007.6 -183.4Q1031 -171.4 1043.7 -149.1Q1056.4 -126.8 1056.4 -97.4ZM1016.4 -97.4Q1016.4 -128 999.6 -145.2Q982.8 -162.4 952 -162.4H924.3V-33.3H952Q982.8 -33.3 999.6 -50.1Q1016.4 -66.9 1016.4 -97.4ZM1521.2 0H1482L1393.3 -134.1V0H1354.1V-195.7H1393.3L1482 -61.3V-195.7H1521.2ZM1699.3 -195.4V-74.5Q1699.3 -54.6 1709.7 -44.1Q1720 -33.6 1738.8 -33.6Q1757.8 -33.6 1768.2 -44.1Q1778.6 -54.6 1778.6 -74.5V-195.4H1818V-74.8Q1818 -49.8 1807.3 -32.6Q1796.5 -15.4 1778.4 -6.7Q1760.4 2 1738.2 2Q1716.4 2 1698.6 -6.7Q1680.8 -15.4 1670.5 -32.6Q1660.1 -49.8 1660.1 -74.8V-195.4ZM2089.6 -195.4V-163.8H2037.6V0H1998.4V-163.8H1946.3V-195.4ZM2319.8 0 2276.7 -76.2H2258.2V0H2219V-195.4H2292.4Q2315 -195.4 2331 -187.5Q2347 -179.5 2354.9 -165.9Q2362.9 -152.3 2362.9 -135.5Q2362.9 -116.2 2351.7 -100.7Q2340.5 -85.1 2318.4 -79.2L2365.2 0ZM2258.2 -105.6H2291Q2306.9 -105.6 2314.8 -113.3Q2322.6 -121 2322.6 -134.7Q2322.6 -148.1 2314.8 -155.5Q2306.9 -163 2291 -163H2258.2ZM2538.5 -195.4V0H2499.3V-195.4ZM2810.9 -195.4V-163.8H2758.8V0H2719.6V-163.8H2667.6V-195.4ZM2979.5 -195.4V0H2940.3V-195.4ZM3109.4 -98.3Q3109.4 -126.8 3122.8 -149.7Q3136.3 -172.5 3159.2 -185.4Q3182.2 -198.2 3209.6 -198.2Q3237.4 -198.2 3260.2 -185.4Q3283 -172.5 3296.3 -149.7Q3309.6 -126.8 3309.6 -98.3Q3309.6 -69.4 3296.3 -46.6Q3283 -23.8 3260 -10.9Q3237.1 2 3209.6 2Q3182.2 2 3159.2 -10.9Q3136.3 -23.8 3122.8 -46.6Q3109.4 -69.4 3109.4 -98.3ZM3269.3 -98.3Q3269.3 -117.9 3261.7 -132.6Q3254.2 -147.3 3240.7 -155.1Q3227.3 -163 3209.6 -163Q3192 -163 3178.4 -155.1Q3164.8 -147.3 3157.3 -132.6Q3149.7 -117.9 3149.7 -98.3Q3149.7 -78.7 3157.3 -63.8Q3164.8 -49 3178.4 -41Q3192 -33 3209.6 -33Q3227.3 -33 3240.7 -41Q3254.2 -49 3261.7 -63.8Q3269.3 -78.7 3269.3 -98.3ZM3606.7 0H3567.5L3478.7 -134.1V0H3439.5V-195.7H3478.7L3567.5 -61.3V-195.7H3606.7Z"/></symbol>
+    <symbol id="i-medaille" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><circle cx="28" cy="28" r="20.5"/><text x="28" y="34.5" text-anchor="middle" stroke="none" fill="currentColor" style="font:800 17px Poppins,sans-serif;letter-spacing:-.04em">8g</text></symbol>
+    <symbol id="i-cube" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M28 14.5l12 6.5v14l-12 6.5-12-6.5V21zM16 21l12 6.5 12-6.5M28 27.5v14"/></symbol>
+    <symbol id="i-goutte" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M28 13c5.5 7.3 10 12.8 10 18.6A10 10 0 0 1 18 31.6C18 25.8 22.5 20.3 28 13z"/><path d="M23.5 33.5a5 5 0 0 0 4 4"/></symbol>
+    <symbol id="i-feuille" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M17 39c0-14 8-22 22-22 0 14-8 22-22 22z"/><path d="M17 39l14-14"/></symbol>
+    <symbol id="i-eclair" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M30.5 13.5L19.5 30.5h8l-2 12 11-17h-8z"/></symbol>
+    <symbol id="i-flocon" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M28 14v28M15.9 21l24.2 14M15.9 35l24.2-14M24 16.5l4 3 4-3M24 39.5l4-3 4 3"/></symbol>
+    <symbol id="i-coeur" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26.5"/><path d="M28 39.5S16.5 32.6 16.5 24.6a6 6 0 0 1 11.5-2.4 6 6 0 0 1 11.5 2.4c0 8-11.5 14.9-11.5 14.9z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <!-- Tube : film transparent, glace orange sanguine visible au travers, impression blanche directe -->
+    <linearGradient id="glace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F06A22"/><stop offset=".55" stop-color="#D9431B"/><stop offset="1" stop-color="#B02E16"/>
+    </linearGradient>
+    <linearGradient id="film" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".18" stop-color="#fff" stop-opacity=".08"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".25"/>
+    </linearGradient>
+    <filter id="givre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="t"/>
+      <feColorMatrix in="t" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.6 1.05" result="g"/>
+      <feComposite in="g" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <symbol id="tube" viewBox="0 0 1000 200">
+      <!-- soudures crantées -->
+      <path d="M0 22h46v156H0l8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75z" fill="#F4EFE6" fill-opacity=".72" stroke="#fff" stroke-opacity=".9" stroke-width="1.5"/>
+      <path d="M1000 22h-46v156h46l-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75 8-9.75-8-9.75z" fill="#F4EFE6" fill-opacity=".72" stroke="#fff" stroke-opacity=".9" stroke-width="1.5"/>
+      <g stroke="#fff" stroke-opacity=".7" stroke-width="1.2"><path d="M14 30v140M24 30v140M34 30v140M966 30v140M976 30v140M986 30v140"/></g>
+      <!-- glace -->
+      <rect x="46" y="16" width="908" height="168" rx="14" fill="url(#glace)"/>
+      <rect x="46" y="16" width="908" height="168" rx="14" filter="url(#givre)" opacity=".35"/>
+      <!-- aplat noir à droite -->
+      <rect x="744" y="16" width="210" height="168" fill="#141414" fill-opacity=".9"/>
+      <!-- impression blanche -->
+      <g fill="#fff">
+        <use href="#logo-bl" x="86" y="58" width="270" height="74"/>
+        <text x="221" y="152" text-anchor="middle" style="font:600 13px Poppins,sans-serif;letter-spacing:.18em">GLACE À L'EAU PROTÉINÉE</text>
+        <g transform="translate(398 46)" fill="none" stroke="#fff" stroke-width="3"><circle cx="54" cy="54" r="52"/><circle cx="54" cy="54" r="42" stroke-width="1.5"/></g>
+        <text x="452" y="114" text-anchor="middle" style="font:800 46px Poppins,sans-serif;letter-spacing:-.05em">8g</text>
+        <text x="452" y="134" text-anchor="middle" style="font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.2em">PROTÉINES</text>
+        <g fill="none" stroke="#fff" stroke-width="2.2"><rect x="540" y="52" width="180" height="34" rx="17"/><rect x="540" y="96" width="180" height="34" rx="17"/></g>
+        <text x="630" y="75" text-anchor="middle" style="font:700 15px 'Barlow Condensed',sans-serif;letter-spacing:.16em">0 g SUCRES</text>
+        <text x="630" y="119" text-anchor="middle" style="font:700 13px 'Barlow Condensed',sans-serif;letter-spacing:.12em">0 g MATIÈRES GRASSES</text>
+        <text x="630" y="155" text-anchor="middle" style="font:700 13px 'Barlow Condensed',sans-serif;letter-spacing:.24em">SANS ASPARTAME</text>
+        <path transform="translate(797 44) scale(3.6)" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM11 0h1v1h-1zM13 0h1v1h-1zM14 0h1v1h-1zM17 0h1v1h-1zM18 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM14 2h1v1h-1zM16 2h1v1h-1zM19 2h1v1h-1zM20 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM10 4h1v1h-1zM13 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM19 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM16 5h1v1h-1zM17 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM4 9h1v1h-1zM8 9h1v1h-1zM12 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM9 10h1v1h-1zM10 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM11 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM21 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM0 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM28 12h1v1h-1zM1 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM15 14h1v1h-1zM17 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM10 15h1v1h-1zM11 15h1v1h-1zM12 15h1v1h-1zM13 15h1v1h-1zM14 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM23 15h1v1h-1zM24 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM0 16h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM9 16h1v1h-1zM10 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM0 17h1v1h-1zM3 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM21 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM18 18h1v1h-1zM19 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM25 18h1v1h-1zM28 18h1v1h-1zM0 19h1v1h-1zM2 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM24 19h1v1h-1zM0 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM17 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM25 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM13 22h1v1h-1zM14 22h1v1h-1zM15 22h1v1h-1zM17 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM13 23h1v1h-1zM15 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM19 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM25 25h1v1h-1zM26 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM12 26h1v1h-1zM13 26h1v1h-1zM14 26h1v1h-1zM15 26h1v1h-1zM22 26h1v1h-1zM23 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM10 27h1v1h-1zM12 27h1v1h-1zM16 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM25 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM15 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM23 28h1v1h-1zM24 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1z"/>
+        <text x="849" y="168" text-anchor="middle" style="font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.24em">FOLLOW ME</text>
+      </g>
+      <!-- film transparent -->
+      <rect x="40" y="10" width="920" height="180" rx="16" fill="url(#film)"/>
+      <rect x="40" y="10" width="920" height="180" rx="16" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2"/>
+      <path d="M70 26h860" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="ICEPROT, retour en haut"><svg class="logo" viewBox="0 -12 4152 730" fill="currentColor" aria-hidden="true"><use href="#wm"/></svg></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav">
+        <li><a href="#chiffres">Les chiffres</a></li>
+        <li><a href="#produit">Le produit</a></li>
+        <li><a href="#pour-qui">Pour qui</a></li>
+        <li><a href="#nutrition">Nutrition</a></li>
+        <li><a href="#trouver">Où nous trouver</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-o" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Follow us</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero papier" aria-labelledby="h-hero">
+    <div class="bg08" aria-hidden="true">08</div>
+    <div class="wrap grid">
+      <div>
+        <svg class="logo-hero" viewBox="0 -12 4152 1137" fill="currentColor" role="img" aria-label="ICEPROT — Cold Nutrition"><use href="#logo-bl"/></svg>
+        <p class="label descr">Glace à l'eau protéinée · Marque française</p>
+        <h1 id="h-hero">Post workout game changer.</h1>
+        <span class="filet" aria-hidden="true"></span>
+        <p class="lead">8 g de protéines. 0 g de sucres. 0 g de matières grasses. La récupération passe en version glacée.</p>
+        <div class="actions">
+          <a class="btn btn-o" href="#produit">Découvrir la glace <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+          <a class="btn btn-l" href="#trouver">Où nous trouver</a>
+        </div>
+        <div class="pinceau">
+          <svg viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#F2700A" d="M10 30c40-14 120-22 190-20 70 1 140 3 188 10 9 2 10 14 2 17-8 2-4 7 3 10 7 4 3 13-6 14-66 7-150 12-232 11-52 0-104-3-140-8-12-2-12-13-2-16 8-2 4-6-4-8-11-3-10-8 1-10z"/></svg>
+          <span class="main">La glace qui booste vos performances</span>
+        </div>
+      </div>
+      <div class="tube-zone">
+        <svg class="tube" viewBox="0 0 1000 200" role="img" aria-label="Tube ICEPROT de 100 ml, parfum orange sanguine"><use href="#tube"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. LES CHIFFRES -->
+  <section id="chiffres" class="sombre biais-haut chiffres" aria-labelledby="h-chiffres">
+    <div class="wrap">
+      <div class="head rv">
+        <div>
+          <p class="label">Cold nutrition</p>
+          <h2 id="h-chiffres" class="titre" style="margin-top:14px">Tout ce qu'il faut.<br>Rien de trop.</h2>
+        </div>
+        <p class="muted">La nutrition sportive en version glacée. Une glace à l'eau, des protéines, et c'est tout.</p>
+      </div>
+      <div class="grille">
+        <div class="big8 rv">
+          <div class="n">8<small>g</small></div>
+          <p class="t">de protéines<br>par glace<span>Des protéines de lactosérum dans chaque tube de 100 ml.</span></p>
+        </div>
+        <ul class="args rv">
+          <li><svg class="picto" aria-hidden="true"><use href="#i-medaille"/></svg><span class="k">Protéines</span><span class="pastille v o">8 g</span></li>
+          <li><svg class="picto" aria-hidden="true"><use href="#i-cube"/></svg><span class="k">Sucres</span><span class="pastille v">0 g</span></li>
+          <li><svg class="picto" aria-hidden="true"><use href="#i-goutte"/></svg><span class="k">Matières grasses</span><span class="pastille v">0 g</span></li>
+          <li><svg class="picto" aria-hidden="true"><use href="#i-feuille"/></svg><span class="k">Aspartame</span><span class="pastille">Sans</span></li>
+          <li><svg class="picto" aria-hidden="true"><use href="#i-eclair"/></svg><span class="k">Électrolytes</span><span class="pastille">Ajoutés</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. LE PRODUIT -->
+  <section id="produit" class="produit papier" aria-labelledby="h-produit">
+    <div class="wrap grille">
+      <div class="visuel rv" aria-hidden="true">
+        <div class="rond"></div>
+        <svg class="tube" viewBox="0 0 1000 200"><use href="#tube"/></svg>
+        <div class="ml">100&nbsp;ml<small>1 tube = 1 glace</small></div>
+      </div>
+      <div class="rv">
+        <p class="label muted">Le produit</p>
+        <h2 id="h-produit" class="titre">Un tube.<br>100 ml.<br>8&nbsp;<span style="text-transform:none">g</span>.</h2>
+        <p class="lead">Un tube transparent, une étiquette imprimée en blanc directement dessus. La glace se voit au travers : ce que vous voyez, c'est ce que vous mangez.</p>
+        <p>Glace à l'eau protéinée, édulcorée au sucralose et à la stévia, avec des électrolytes ajoutés. Elle se glisse dans le congélateur de la salle, du club ou de la maison.</p>
+        <div class="parfum">
+          <span class="pt" aria-hidden="true"></span>
+          <div><span class="label">Parfum de lancement</span><strong>Orange sanguine</strong></div>
+        </div>
+        <p class="note">D'autres parfums arrivent. Suivez <a href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">@iceproteine</a> pour les découvrir en premier.</p>
+        <div class="cinq">
+          <div class="n">5<small>&nbsp;MIN</small></div>
+          <p class="main">Attendre 5 min avant de déguster pour un plaisir intense.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motif tee-shirt -->
+  <section class="fuel" aria-label="Fuel your next level">
+    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
+    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
+    <span class="ligne plein">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
+    <span class="ligne" aria-hidden="true">Fuel your next level · Fuel your next level · Fuel your next level · Fuel your next level ·</span>
+  </section>
+
+  <!-- 4. POUR QUI -->
+  <section id="pour-qui" class="qui papier" aria-labelledby="h-qui">
+    <div class="wrap">
+      <div class="intro rv">
+        <div>
+          <p class="label muted">Pour qui</p>
+          <h2 id="h-qui" class="titre" style="margin-top:14px">Same energy.<br>Different goals.</h2>
+        </div>
+        <div>
+          <p class="lead">Pour les sportifs qui veulent finir la séance sur une note fraîche. Que vous soulevez, couriez ou jouiez en équipe, la fin d'effort a un nouveau goût.</p>
+          <div class="sports"><span class="pastille">Salle</span><span class="pastille">Running</span><span class="pastille">Sports collectifs</span></div>
+        </div>
+      </div>
+      <div class="tri">
+        <article class="rv">
+          <span class="num" aria-hidden="true">01</span>
+          <svg class="picto" aria-hidden="true"><use href="#i-eclair"/></svg>
+          <h3><u>Énergie</u></h3>
+          <p>Des électrolytes ajoutés et un shot de fraîcheur, juste après l'effort.</p>
+        </article>
+        <article class="noir rv">
+          <span class="num" aria-hidden="true">02</span>
+          <svg class="picto" aria-hidden="true"><use href="#i-medaille"/></svg>
+          <h3><u>Récupération</u></h3>
+          <p>8 g de protéines de lactosérum par glace, prêtes à déguster en sortant de séance.</p>
+        </article>
+        <article class="rv">
+          <span class="num" aria-hidden="true">03</span>
+          <svg class="picto" aria-hidden="true"><use href="#i-coeur"/></svg>
+          <h3><u>Plaisir</u></h3>
+          <p>Le goût d'une vraie glace à l'eau. Sans sucres, sans matières grasses, sans aspartame.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INGRÉDIENTS ET VALEURS NUTRITIONNELLES -->
+  <section id="nutrition" class="nutri" aria-labelledby="h-nutri">
+    <div class="wrap grille">
+      <div class="rv">
+        <p class="label muted">Orange sanguine</p>
+        <h2 id="h-nutri" class="titre" style="font-size:clamp(2.4rem,5.2vw,4.2rem)">Ingrédients et valeurs nutritionnelles</h2>
+        <p class="ingr"><span class="label" style="display:block;margin-bottom:8px">Ingrédients</span>
+          Eau, hydrolysat de protéines de <strong>LACTOSÉRUM</strong>, correcteur d'acidité (acide phosphorique), arômes, concentré de carotte et d'orange sanguine, sel, colorant (caroténoïdes), édulcorants (sucralose, glycosides de stéviol issus de stevia), électrolytes.</p>
+        <p class="allerg"><svg class="picto" style="width:26px;height:26px" aria-hidden="true"><use href="#i-goutte"/></svg>Allergène : lait (lactosérum)</p>
+        <p class="note">La liste des ingrédients varie selon le parfum.</p>
+      </div>
+      <div class="vn rv">
+        <div class="vn-h"><h3>Valeurs nutritionnelles</h3><span>Pour 100 ml<br>soit 1 tube</span></div>
+        <table>
+          <caption class="sr">Valeurs nutritionnelles pour 100 ml, soit un tube</caption>
+          <tbody>
+            <tr><th scope="row">Énergie</th><td>50 kJ / 12 kcal</td></tr>
+            <tr><th scope="row">Matières grasses</th><td>0 g</td></tr>
+            <tr class="sub"><th scope="row">dont acides gras saturés</th><td>0 g</td></tr>
+            <tr><th scope="row">Glucides</th><td>0,5 g</td></tr>
+            <tr class="sub"><th scope="row">dont sucres</th><td>0 g</td></tr>
+            <tr class="prot"><th scope="row">Protéines</th><td>8 g</td></tr>
+            <tr><th scope="row">Sel</th><td>0,12 g</td></tr>
+          </tbody>
+        </table>
+        <p class="conserv">À conserver au congélateur. Attendre 5 min avant de déguster pour un plaisir intense.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. OÙ NOUS TROUVER -->
+  <section id="trouver" class="trouver papier" aria-labelledby="h-trouver">
+    <div class="wrap grille">
+      <div class="rv">
+        <p class="label muted">Où nous trouver</p>
+        <h2 id="h-trouver" class="titre">Lancement en cours.</h2>
+        <p class="lead">Les premiers points de vente et nos prochains événements sont annoncés sur Instagram. Retrouvez notre stand au bord des terrains, des pistes et des salles.</p>
+        <ul class="etapes">
+          <li><b>01</b><span>Vous êtes une salle de sport, un club ou un commerce&nbsp;? Proposez ICEPROT à vos adhérents.</span></li>
+          <li><b>02</b><span>Vous organisez un événement sportif&nbsp;? Invitez notre stand.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-o" href="https://ig.me/m/iceproteine" target="_blank" rel="noopener">Nous écrire <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+          <a class="btn btn-l" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Voir les événements</a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="stand" aria-hidden="true">
+          <p class="fuel-s">Fuel<br>your<br>next<br>level</p>
+          <svg class="logo" viewBox="0 -12 4152 1137" fill="currentColor"><use href="#logo-bl"/></svg>
+          <p class="main">Glace à l'eau protéinée</p>
+        </div>
+        <p class="stand-legende">Notre stand : repérez le panneau noir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. INSTAGRAM -->
+  <section id="instagram" class="insta" aria-labelledby="h-insta">
+    <div class="wrap grille">
+      <div class="rv">
+        <p class="label">Psst… Nouveau produit…</p>
+        <h2 id="h-insta" class="titre" style="margin-top:14px">Follow us</h2>
+        <a class="handle" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">@iceproteine</a>
+        <p class="tease">Nouveaux parfums, points de vente, événements : tout se passe d'abord sur Instagram.</p>
+        <div class="actions">
+          <a class="btn btn-n" href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Suivre sur Instagram</a>
+        </div>
+      </div>
+      <div class="qr rv">
+        <svg viewBox="-2 -2 33 33" role="img" aria-label="QR code vers le compte Instagram @iceproteine"><path fill="#17130A" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM11 0h1v1h-1zM13 0h1v1h-1zM14 0h1v1h-1zM17 0h1v1h-1zM18 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM14 2h1v1h-1zM16 2h1v1h-1zM19 2h1v1h-1zM20 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM10 4h1v1h-1zM13 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM19 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM16 5h1v1h-1zM17 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM4 9h1v1h-1zM8 9h1v1h-1zM12 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM9 10h1v1h-1zM10 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM11 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM21 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM0 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM28 12h1v1h-1zM1 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM15 14h1v1h-1zM17 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM10 15h1v1h-1zM11 15h1v1h-1zM12 15h1v1h-1zM13 15h1v1h-1zM14 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM23 15h1v1h-1zM24 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM0 16h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM9 16h1v1h-1zM10 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM0 17h1v1h-1zM3 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM21 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM18 18h1v1h-1zM19 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM25 18h1v1h-1zM28 18h1v1h-1zM0 19h1v1h-1zM2 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM24 19h1v1h-1zM0 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM17 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM25 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM13 22h1v1h-1zM14 22h1v1h-1zM15 22h1v1h-1zM17 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM13 23h1v1h-1zM15 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM19 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM25 25h1v1h-1zM26 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM12 26h1v1h-1zM13 26h1v1h-1zM14 26h1v1h-1zM15 26h1v1h-1zM22 26h1v1h-1zM23 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM10 27h1v1h-1zM12 27h1v1h-1zM16 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM25 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM15 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM23 28h1v1h-1zM24 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1z"/></svg>
+        <span class="label">Follow us @iceproteine</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 8. PIED DE PAGE -->
+<footer class="pied">
+  <div class="wrap">
+    <div class="haut">
+      <svg class="logo" viewBox="0 -12 4152 1137" fill="currentColor" role="img" aria-label="ICEPROT — Cold Nutrition"><use href="#logo-bl"/></svg>
+      <p class="sig">Cold nutrition<br>for a <span>better you.</span></p>
+    </div>
+    <div class="bas">
+      <span>Marque française</span>
+      <ul>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="https://ig.me/m/iceproteine" target="_blank" rel="noopener">Contact</a></li>
+        <li><a href="https://www.instagram.com/iceproteine" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+      <span>© <span id="annee">2026</span> ICEPROT</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('annee').textContent = new Date().getFullYear();
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
