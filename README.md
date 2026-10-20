@@ -9,3 +9,7 @@ Site de lancement ICEPROT — glace à l'eau protéinée. Pages statiques servie
 - `assets/` : logos, favicon, et `video/` (vidéo et affiche provisoires, à remplacer).
 
 Le wordmark est Poppins ExtraBold vectorisé (approche −0,025 em). Le filet en réserve va du fût du I au fût du T, centré sur la barre centrale du E, épaisseur 7,5 % de la hauteur des capitales.
+
+## Skill Claude Code
+
+`.claude/skills/ui-ux-pro-max/` : skill de design [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (licence MIT, commit `56ea9cf`), chargé automatiquement par Claude Code dans ce dépôt. Le script de recherche se lance depuis la racine du dépôt avec `python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<requête>" --domain <domaine>`. La charte ICEPROT reste prioritaire sur ses recommandations (palettes notamment).
