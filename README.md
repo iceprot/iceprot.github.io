@@ -2,8 +2,10 @@
 
 Site de lancement ICEPROT — glace à l'eau protéinée. Pages statiques servies par GitHub Pages, sans étape de build.
 
-- `index.html` : page d'accueil complète (structure inspirée d'ofuel.co) avec hero vidéo. Textes provisoires en lorem ipsum.
-- `CHAMPS.md` : liste des champs à renseigner (identifiants `data-champ` de `index.html`) et des médias à fournir.
+- `index.html` : page d'accueil complète (structure inspirée d'ofuel.co) avec hero vidéo.
+- `contenu.json` : **tous les textes de la page et l'affichage de chaque bloc** (`true` / `false`). C'est le fichier à modifier, directement sur github.com.
+- `CHAMPS.md` : mode d'emploi de `contenu.json`, liste des blocs et des champs, médias à fournir.
+- `.github/workflows/verifier-contenu.yml` : vérifie `contenu.json` à chaque modification.
 - `v1.html` : première version, page unique rédigée d'après le brief de marque.
 - `mentions-legales.html` : mentions légales (champs entre crochets à compléter).
 - `assets/` : logos, favicon, et `video/` (vidéo et affiche provisoires, à remplacer).

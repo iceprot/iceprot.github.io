@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');setTimeout(()=>document.documentElement.classList.add('pret'),1500)</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ICEPROT — Glace à l'eau protéinée</title>
 <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. ICEPROT, glace à l'eau protéinée.">
@@ -252,6 +252,8 @@ button{font:inherit;color:inherit}
 @media (max-width:980px){.cols{grid-template-columns:1fr 1fr}.cols>div:last-child{grid-column:1/-1}}
 
 .ph{outline:1px dashed rgba(236,78,68,.0)}
+[hidden]{display:none!important}
+.js:not(.pret) body{visibility:hidden}
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
@@ -320,22 +322,22 @@ button{font:inherit;color:inherit}
 </svg>
 
 <!-- 1. EN-TÊTE -->
-<header class="top">
+<header class="top" data-bloc="entete">
   <div class="wrap">
     <div class="pill">
       <a href="#top" aria-label="ICEPROT, accueil"><svg class="logo" viewBox="0 -12 4152 730" fill="currentColor" aria-hidden="true"><use href="#wm"/></svg></a>
       <nav aria-label="Navigation principale">
         <ul class="menu">
           <li>
-            <button type="button" aria-expanded="false" aria-controls="sous-boutique" data-champ="nav.boutique">Boutique <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <button type="button" aria-expanded="false" aria-controls="sous-boutique" data-champ="nav.boutique">Boutique</button>
             <div class="sous" id="sous-boutique">
               <a href="#produit"><b data-champ="nav.boutique.1.titre">Lorem ipsum</b><span data-champ="nav.boutique.1.texte">Dolor sit amet · XX,XX €</span></a>
               <a href="#produit"><b data-champ="nav.boutique.2.titre">Consectetur pack</b><span data-champ="nav.boutique.2.texte">Adipiscing elit sed do</span></a>
               <a href="#produit"><b data-champ="nav.boutique.3.titre">Tout voir</b></a>
             </div>
           </li>
-          <li><a href="#pourquoi" data-champ="nav.2">Pourquoi ICEPROT</a></li>
-          <li><a href="#proteines-101" data-champ="nav.3">Protéines 101</a></li>
+          <li hidden><a href="#pourquoi" data-champ="nav.2">Pourquoi ICEPROT</a></li>
+          <li hidden><a href="#proteines-101" data-champ="nav.3">Protéines 101</a></li>
         </ul>
       </nav>
     </div>
@@ -348,13 +350,13 @@ button{font:inherit;color:inherit}
 </header>
 <div class="tiroir" id="tiroir" role="dialog" aria-modal="true" aria-label="Menu">
   <button class="ico fermer" type="button" aria-label="Fermer le menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  <a href="#produit">Boutique</a><a href="#pourquoi">Pourquoi ICEPROT</a><a href="#proteines-101">Protéines 101</a><a href="#faq">FAQ</a><a href="#inscription">Connexion</a>
+  <a href="#produit">Boutique</a><a hidden href="#pourquoi">Pourquoi ICEPROT</a><a hidden href="#proteines-101">Protéines 101</a><a href="#faq">FAQ</a><a href="#inscription">Connexion</a>
 </div>
 
 <main id="top">
 
   <!-- 2. HERO VIDÉO -->
-  <section class="hero" aria-labelledby="h-hero">
+  <section class="hero" data-bloc="hero" aria-labelledby="h-hero">
     <video id="video-hero" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-hidden="true">
       <!-- Remplacer par la vidéo définitive (prévoir aussi une version mobile verticale) -->
       <source src="assets/video/hero-provisoire.webm" type="video/webm">
@@ -368,7 +370,7 @@ button{font:inherit;color:inherit}
         <p class="texte" data-champ="hero.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <div class="actions">
           <a class="btn btn-b" href="#produit"><span data-champ="hero.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
-          <a class="btn btn-l" href="#proteines-101" data-champ="hero.bouton-2">Dolor sit amet</a>
+          <a hidden class="btn btn-l" href="#proteines-101" data-champ="hero.bouton-2">Dolor sit amet</a>
         </div>
       </div>
     </div>
@@ -376,7 +378,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 3. BANDEAU BÉNÉFICES -->
-  <section class="benef" aria-label="Les bénéfices">
+  <section class="benef" data-bloc="benefices" aria-label="Les bénéfices">
     <ul>
       <li><svg aria-hidden="true"><use href="#i-medaille"/></svg><span data-champ="benef.1"><b>8 g</b> protéines</span></li>
       <li><svg aria-hidden="true"><use href="#i-cube"/></svg><span data-champ="benef.2"><b>0 g</b> sucres</span></li>
@@ -385,7 +387,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 4. PRODUIT VEDETTE -->
-  <section id="produit" class="vedette sec" aria-labelledby="h-produit">
+  <section id="produit" class="vedette sec" data-bloc="produit" aria-labelledby="h-produit">
     <div class="wrap grille">
       <div class="orbite rv">
         <div class="cercle" aria-hidden="true"></div>
@@ -417,7 +419,7 @@ button{font:inherit;color:inherit}
           <div><small data-champ="produit.prix.mention">À PARTIR DE</small><strong data-champ="produit.prix">XX,XX €</strong></div>
           <div class="actions">
             <a class="btn btn-n" href="#inscription"><span data-champ="produit.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
-            <a class="btn btn-l" href="#pourquoi" data-champ="produit.bouton-2">Dolor sit</a>
+            <a hidden class="btn btn-l" href="#pourquoi" data-champ="produit.bouton-2">Dolor sit</a>
           </div>
         </div>
       </div>
@@ -425,7 +427,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 5. INSCRIPTION COMMUNAUTÉ -->
-  <section id="inscription" class="inscr" aria-labelledby="h-inscr">
+  <section id="inscription" class="inscr" data-bloc="inscription" aria-labelledby="h-inscr">
     <div class="visuel-ph" aria-hidden="true"><span class="mention">Photo à fournir</span></div>
     <div class="wrap">
       <div class="carte-verre rv">
@@ -446,7 +448,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 6. PROFILS -->
-  <section class="profils sec" aria-labelledby="h-profils">
+  <section id="profils" class="profils sec" data-bloc="profils" hidden aria-labelledby="h-profils">
     <div class="wrap">
       <div class="tete rv">
         <h2 id="h-profils" class="h2" data-champ="profils.titre">Lorem ipsum, dolor <em>sit amet</em></h2>
@@ -466,7 +468,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 7. POURQUOI -->
-  <section id="pourquoi" class="pourquoi sec" aria-labelledby="h-pourquoi">
+  <section id="pourquoi" class="pourquoi sec" data-bloc="pourquoi" hidden aria-labelledby="h-pourquoi">
     <div class="wrap grille">
       <div class="photo-ph rv"><svg class="tube" viewBox="0 0 1000 200" aria-hidden="true"><use href="#tube"/></svg><span class="mention">Photo à fournir</span></div>
       <div class="rv">
@@ -491,7 +493,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 8. PROTÉINES 101 -->
-  <section id="proteines-101" class="sombre c101 sec" aria-labelledby="h-101">
+  <section id="proteines-101" class="sombre c101 sec" data-bloc="proteines-101" hidden aria-labelledby="h-101">
     <div class="wrap">
       <div class="tete rv">
         <div>
@@ -513,7 +515,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 9. COMPARATIF -->
-  <section class="sombre comp sec" aria-labelledby="h-comp">
+  <section id="comparatif" class="sombre comp sec" data-bloc="comparatif" hidden aria-labelledby="h-comp">
     <div class="wrap">
       <div class="tete rv">
         <h2 id="h-comp" class="h2" data-champ="comparatif.titre">Lorem ipsum dolor sit amet</h2>
@@ -540,7 +542,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 10. FAQ -->
-  <section id="faq" class="faq sec" aria-labelledby="h-faq">
+  <section id="faq" class="faq sec" data-bloc="faq" aria-labelledby="h-faq">
     <div class="wrap">
       <h2 id="h-faq" class="h2 rv" data-champ="faq.titre">Lorem ipsum, <em>dolor</em>.</h2>
       <details class="rv" open><summary><span data-champ="faq.1.question">Lorem ipsum dolor sit amet ?</span><i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p data-champ="faq.1.reponse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></details>
@@ -552,7 +554,7 @@ button{font:inherit;color:inherit}
   </section>
 
   <!-- 11. APPEL FINAL -->
-  <section class="sombre final sec" aria-labelledby="h-final">
+  <section id="final" class="sombre final sec" data-bloc="final" aria-labelledby="h-final">
     <div class="wrap rv">
       <div class="badge" aria-hidden="true">
         <svg class="txt" viewBox="0 0 130 130"><defs><path id="cercle-txt" d="M65 65m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text fill="#fff" style="font:700 12.4px 'Barlow Condensed',sans-serif;letter-spacing:.2em"><textPath href="#cercle-txt" textLength="312" lengthAdjust="spacing">8 G PROTÉINES · 0 G SUCRES · COLD NUTRITION ·</textPath></text></svg>
@@ -562,7 +564,7 @@ button{font:inherit;color:inherit}
       <p class="chapo" data-champ="final.texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
       <div class="actions">
         <a class="btn btn-b" href="#produit"><span data-champ="final.bouton-1">Lorem ipsum</span><span class="r"><svg aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
-        <a class="btn btn-l" href="#proteines-101" data-champ="final.bouton-2">Dolor sit</a>
+        <a hidden class="btn btn-l" href="#proteines-101" data-champ="final.bouton-2">Dolor sit</a>
       </div>
     </div>
   </section>
@@ -570,11 +572,11 @@ button{font:inherit;color:inherit}
 </main>
 
 <!-- 12. PIED DE PAGE -->
-<footer class="pied">
+<footer class="pied" data-bloc="pied">
   <div class="wrap">
     <div class="cols">
       <div><h2>Boutique</h2><ul><li><a href="#produit">Lorem ipsum</a></li><li><a href="#produit">Tout voir</a></li></ul></div>
-      <div><h2>Comprendre</h2><ul><li><a href="#pourquoi">Pourquoi ICEPROT</a></li><li><a href="#proteines-101">Protéines 101</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h2>Comprendre</h2><ul><li hidden><a href="#pourquoi">Pourquoi ICEPROT</a></li><li hidden><a href="#proteines-101">Protéines 101</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h2>La marque</h2><ul><li><a href="https://ig.me/m/iceproteine">Contact</a></li><li><a href="#">Devenir revendeur</a></li><li><a href="#">Événements</a></li></ul></div>
       <div><h2>Informations</h2><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="#">CGV</a></li><li><a href="#">Livraison et retours</a></li><li><a href="#">Confidentialité</a></li></ul></div>
       <div><h2>Suivez-nous</h2><div class="reseaux"><a href="https://www.instagram.com/iceproteine" aria-label="Instagram @iceproteine"><svg aria-hidden="true"><use href="#i-insta"/></svg></a></div></div>
@@ -588,6 +590,30 @@ button{font:inherit;color:inherit}
 </footer>
 
 <script>
+  // Contenu : textes et blocs affichés, lus dans contenu.json (modifiable sur GitHub)
+  const html = document.documentElement;
+  const echap = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const rendu = s => echap(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<em>$1</em>');
+  function appliquerContenu(c) {
+    const blocs = c.blocs || {}, textes = c.textes || {};
+    document.querySelectorAll('[data-bloc]').forEach(el => { el.hidden = blocs[el.dataset.bloc] === false; });
+    document.querySelectorAll('[data-champ]').forEach(el => {
+      const v = textes[el.dataset.champ];
+      if (typeof v === 'string') el.innerHTML = rendu(v);
+    });
+    // Liens vers un bloc masqué : on masque le lien (ou sa ligne de menu)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      const cible = document.getElementById(a.getAttribute('href').slice(1));
+      const bloc = cible && cible.closest('[data-bloc]');
+      (a.closest('li') || a).hidden = !!(bloc && bloc.hidden);
+    });
+  }
+  fetch('contenu.json', { cache: 'no-cache' })
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+    .then(appliquerContenu)
+    .catch(e => console.warn('contenu.json non appliqué, contenu par défaut affiché :', e.message))
+    .finally(() => html.classList.add('pret'));
+
   document.getElementById('annee').textContent = new Date().getFullYear();
 
   // Révélation au défilement

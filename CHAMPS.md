@@ -1,191 +1,73 @@
-# Champs à renseigner
+# Modifier le site
 
-Chaque texte provisoire de `index.html` porte un identifiant `data-champ`. Donnez le texte voulu en face de chaque identifiant (inutile de tout remplir d'un coup). Dans les titres, la partie entre `*astérisques*` passe en manuscrit orange.
+Tous les textes de la page d'accueil et l'affichage des blocs se règlent dans un seul fichier : **`contenu.json`**, à la racine du dépôt.
 
+## Modifier depuis github.com
 
-## 1. En-tête
+1. Ouvrez le dépôt sur github.com, branche `main`, et cliquez sur `contenu.json`.
+2. Cliquez sur l'icône crayon (« Edit this file »).
+3. Changez les textes entre guillemets, ou passez un bloc de `true` à `false`.
+4. Cliquez sur **Commit changes…**, puis de nouveau sur **Commit changes**.
+5. Le site se met à jour en une à deux minutes. Rechargez la page pour voir le résultat.
 
-| Champ | Texte provisoire |
-|---|---|
-| `nav.boutique` | Boutique |
-| `nav.boutique.1.titre` | Lorem ipsum |
-| `nav.boutique.1.texte` | Dolor sit amet · XX,XX € |
-| `nav.boutique.2.titre` | Consectetur pack |
-| `nav.boutique.2.texte` | Adipiscing elit sed do |
-| `nav.boutique.3.titre` | Tout voir |
-| `nav.2` | Pourquoi ICEPROT |
-| `nav.3` | Protéines 101 |
-| `nav.connexion` | Connexion |
+Après chaque enregistrement, une vérification automatique se lance (onglet **Actions**). Une croix rouge signale une erreur, avec la ligne à corriger. Le site continue alors d'afficher les textes de la dernière version valide.
 
-## 2. Hero vidéo
+## Règles d'écriture
 
-| Champ | Texte provisoire |
-|---|---|
-| `hero.surtitre` | Lorem ipsum dolor |
-| `hero.titre` | Lorem ipsum dolor *sit amet* |
-| `hero.sous-titre` | Consectetur adipiscing elit sed do |
-| `hero.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. |
-| `hero.bouton-1` | Lorem ipsum |
-| `hero.bouton-2` | Dolor sit amet |
+- Chaque texte reste **entre guillemets droits** : `"hero.titre": "Mon titre"`. Chaque ligne se termine par une virgule, sauf la dernière d'un groupe.
+- Pour écrire un guillemet dans un texte, utilisez les guillemets français « » ou l'apostrophe typographique ’.
+- `*mots*` : passe ces mots en manuscrit, couleur corail dans les titres (exemple : `"Post workout *game changer.*"`).
+- `**mots**` : met ces mots en gras.
+- Les blocs s'écrivent `true` (affiché) ou `false` (masqué), **sans guillemets**. Un bloc masqué n'est pas supprimé, et ses liens dans le menu et le pied de page disparaissent aussi.
 
-## 3. Bandeau bénéfices
+## Les blocs
 
-| Champ | Texte provisoire |
-|---|---|
-| `benef.1` | 8 g protéines |
-| `benef.2` | 0 g sucres |
-| `benef.3` | 0 g matières grasses |
+| Identifiant | Bloc | Au lancement |
+|---|---|---|
+| `entete` | 1. En-tête (menu) | affiché |
+| `hero` | 2. Hero vidéo | affiché |
+| `benefices` | 3. Bandeau 8 g / 0 g / 0 g | affiché |
+| `produit` | 4. Produit vedette | affiché |
+| `inscription` | 5. Inscription communauté | affiché |
+| `profils` | 6. Profils (8 cartes) | masqué |
+| `pourquoi` | 7. Pourquoi ICEPROT | masqué |
+| `proteines-101` | 8. Protéines 101 | masqué |
+| `comparatif` | 9. Comparatif | masqué |
+| `faq` | 10. FAQ | affiché |
+| `final` | 11. Appel final | affiché |
+| `pied` | 12. Pied de page | affiché |
 
-## 4. Produit vedette
+## Les textes
 
-| Champ | Texte provisoire |
-|---|---|
-| `produit.orbite.1` | Lorem ipsum |
-| `produit.orbite.2` | Dolor sit |
-| `produit.orbite.3` | Amet elit |
-| `produit.orbite.4` | Consectetur |
-| `produit.orbite.5` | Adipiscing |
-| `produit.orbite.6` | Sed do |
-| `produit.surtitre` | Lorem ipsum |
-| `produit.titre` | Lorem ipsum dolor sit amet |
-| `produit.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. |
-| `produit.picto.1` | Lorem ipsum |
-| `produit.picto.2` | Dolor sit |
-| `produit.picto.3` | Amet elit |
-| `produit.picto.4` | Sed do |
-| `produit.point.1` | Lorem ipsum dolor sit amet |
-| `produit.point.2` | Consectetur adipiscing elit |
-| `produit.point.3` | Sed do eiusmod tempor |
-| `produit.prix.mention` | À PARTIR DE |
-| `produit.prix` | XX,XX € |
-| `produit.bouton-1` | Lorem ipsum |
-| `produit.bouton-2` | Dolor sit |
+Le texte actuel de chaque champ se lit directement dans `contenu.json`. Les champs des blocs masqués peuvent être préparés à l'avance.
 
-## 5. Inscription communauté
+**1. En-tête** : `nav.boutique` `nav.boutique.1.titre` `nav.boutique.1.texte` `nav.boutique.2.titre` `nav.boutique.2.texte` `nav.boutique.3.titre` `nav.2` `nav.3` `nav.connexion`
 
-| Champ | Texte provisoire |
-|---|---|
-| `inscription.surtitre` | Lorem ipsum |
-| `inscription.titre` | Lorem ipsum dolor *sit amet* |
-| `inscription.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| `inscription.consentement` | Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
-| `inscription.bouton` | Lorem ipsum dolor |
+**2. Hero vidéo** : `hero.surtitre` `hero.titre` `hero.sous-titre` `hero.texte` `hero.bouton-1` `hero.bouton-2`
 
-## 6. Profils
+**3. Bandeau bénéfices** : `benef.1` `benef.2` `benef.3`
 
-| Champ | Texte provisoire |
-|---|---|
-| `profils.titre` | Lorem ipsum, dolor *sit amet* |
-| `profils.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| `profils.1.titre` | Lorem ipsum |
-| `profils.1.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. |
-| `profils.2.titre` | Dolor sit amet |
-| `profils.2.texte` | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. |
-| `profils.3.titre` | Consectetur elit |
-| `profils.3.texte` | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. |
-| `profils.4.titre` | Sed do eiusmod |
-| `profils.4.texte` | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. |
-| `profils.5.titre` | Tempor incididunt |
-| `profils.5.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. |
-| `profils.6.titre` | Ut labore et |
-| `profils.6.texte` | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. |
-| `profils.7.titre` | Dolore magna |
-| `profils.7.texte` | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. |
-| `profils.8.titre` | Aliqua ut enim |
-| `profils.8.texte` | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. |
+**4. Produit vedette** : `produit.orbite.1` `produit.orbite.2` `produit.orbite.3` `produit.orbite.4` `produit.orbite.5` `produit.orbite.6` `produit.surtitre` `produit.titre` `produit.texte` `produit.picto.1` `produit.picto.2` `produit.picto.3` `produit.picto.4` `produit.point.1` `produit.point.2` `produit.point.3` `produit.prix.mention` `produit.prix` `produit.bouton-1` `produit.bouton-2`
 
-## 7. Pourquoi ICEPROT
+**5. Inscription communauté** : `inscription.surtitre` `inscription.titre` `inscription.texte` `inscription.consentement` `inscription.bouton`
 
-| Champ | Texte provisoire |
-|---|---|
-| `pourquoi.surtitre` | Lorem ipsum |
-| `pourquoi.titre` | Lorem ipsum dolor |
-| `pourquoi.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| `pourquoi.point.1` | Lorem ipsum dolor |
-| `pourquoi.point.2` | Sit amet consectetur |
-| `pourquoi.point.3` | Adipiscing elit sed |
-| `pourquoi.point.4` | Do eiusmod tempor |
-| `pourquoi.point.5` | Incididunt ut labore |
-| `pourquoi.point.6` | Et dolore magna |
-| `pourquoi.rond.1.etiquette` | Lorem |
-| `pourquoi.rond.1.titre` | Ipsum |
-| `pourquoi.rond.1.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing. |
-| `pourquoi.rond.2.etiquette` | Dolor |
-| `pourquoi.rond.2.titre` | Sit amet |
-| `pourquoi.rond.2.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing. |
-| `pourquoi.rond.3.etiquette` | Elit |
-| `pourquoi.rond.3.titre` | Sed do |
-| `pourquoi.rond.3.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing. |
+**6. Profils** : `profils.titre` `profils.texte` `profils.1.titre` `profils.1.texte` `profils.2.titre` `profils.2.texte` `profils.3.titre` `profils.3.texte` `profils.4.titre` `profils.4.texte` `profils.5.titre` `profils.5.texte` `profils.6.titre` `profils.6.texte` `profils.7.titre` `profils.7.texte` `profils.8.titre` `profils.8.texte`
 
-## 8. Protéines 101
+**7. Pourquoi ICEPROT** : `pourquoi.surtitre` `pourquoi.titre` `pourquoi.texte` `pourquoi.point.1` `pourquoi.point.2` `pourquoi.point.3` `pourquoi.point.4` `pourquoi.point.5` `pourquoi.point.6` `pourquoi.rond.1.etiquette` `pourquoi.rond.1.titre` `pourquoi.rond.1.texte` `pourquoi.rond.2.etiquette` `pourquoi.rond.2.titre` `pourquoi.rond.2.texte` `pourquoi.rond.3.etiquette` `pourquoi.rond.3.titre` `pourquoi.rond.3.texte`
 
-| Champ | Texte provisoire |
-|---|---|
-| `c101.surtitre` | Protéines 101 |
-| `c101.titre` | Lorem ipsum, dolor *sit amet* |
-| `c101.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| `c101.bouton` | Lorem ipsum |
-| `c101.1.titre` | Lorem ipsum |
-| `c101.1.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. |
-| `c101.2.titre` | Dolor sit amet |
-| `c101.2.texte` | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. |
-| `c101.3.titre` | Consectetur elit |
-| `c101.3.texte` | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. |
-| `c101.4.titre` | Sed do eiusmod |
-| `c101.4.texte` | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. |
+**8. Protéines 101** : `c101.surtitre` `c101.titre` `c101.texte` `c101.bouton` `c101.1.titre` `c101.1.texte` `c101.2.titre` `c101.2.texte` `c101.3.titre` `c101.3.texte` `c101.4.titre` `c101.4.texte`
 
-## 9. Comparatif
+**9. Comparatif** : `comparatif.titre` `comparatif.texte` `comparatif.colonne.2` `comparatif.colonne.3` `comparatif.ligne.1` `comparatif.ligne.2` `comparatif.ligne.3` `comparatif.ligne.4` `comparatif.ligne.5` `comparatif.ligne.6` `comparatif.ligne.7` `comparatif.ligne.8` `comparatif.bouton`
 
-| Champ | Texte provisoire |
-|---|---|
-| `comparatif.titre` | Lorem ipsum dolor sit amet |
-| `comparatif.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| `comparatif.colonne.2` | Lorem ipsum |
-| `comparatif.colonne.3` | Dolor sit |
-| `comparatif.ligne.1` | Lorem ipsum dolor |
-| `comparatif.ligne.2` | Sit amet consectetur |
-| `comparatif.ligne.3` | Adipiscing elit |
-| `comparatif.ligne.4` | Sed do eiusmod tempor |
-| `comparatif.ligne.5` | Incididunt ut labore |
-| `comparatif.ligne.6` | Et dolore magna aliqua |
-| `comparatif.ligne.7` | Ut enim ad minim |
-| `comparatif.ligne.8` | Quis nostrud exercitation |
-| `comparatif.bouton` | Lorem ipsum dolor |
+**10. FAQ** : `faq.titre` `faq.1.question` `faq.1.reponse` `faq.2.question` `faq.2.reponse` `faq.3.question` `faq.3.reponse` `faq.4.question` `faq.4.reponse` `faq.5.question` `faq.5.reponse`
 
-## 10. FAQ
+**11. Appel final** : `final.titre` `final.texte` `final.bouton-1` `final.bouton-2`
 
-| Champ | Texte provisoire |
-|---|---|
-| `faq.titre` | Lorem ipsum, *dolor* |
-| `faq.1.question` | Lorem ipsum dolor sit amet ? |
-| `faq.1.reponse` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. |
-| `faq.2.question` | Consectetur adipiscing elit sed do ? |
-| `faq.2.reponse` | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. |
-| `faq.3.question` | Eiusmod tempor incididunt ut labore ? |
-| `faq.3.reponse` | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. |
-| `faq.4.question` | Et dolore magna aliqua ut enim ? |
-| `faq.4.reponse` | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. |
-| `faq.5.question` | Quis nostrud exercitation ullamco ? |
-| `faq.5.reponse` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. |
-
-## 11. Appel final
-
-| Champ | Texte provisoire |
-|---|---|
-| `final.titre` | Lorem *ipsum* |
-| `final.texte` | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. |
-| `final.bouton-1` | Lorem ipsum |
-| `final.bouton-2` | Dolor sit |
-
-## 12. Pied de page
-
-| Champ | Texte provisoire |
-|---|---|
-| `pied.mention` | Lorem ipsum dolor sit amet |
+**12. Pied de page** : `pied.mention`
 
 ## Médias à fournir
 
-- **Vidéo du hero** : MP4 (H.264) en 1920×1080, 8 à 15 s en boucle, sans son, moins de 5 Mo. Une version verticale pour mobile est un plus. Une image d'affiche (poster) en JPG.
+- **Vidéo du hero** : MP4 (H.264) en 1920×1080, 8 à 15 s en boucle, sans son, moins de 5 Mo. Une version verticale pour mobile est un plus. Fichier à remplacer : `assets/video/hero-provisoire.mp4` (et l'image d'attente `assets/video/hero-poster.jpg`).
 - **Photo du bloc Inscription** : photo d'ambiance en paysage, 2400 px de large.
 - **Photo du bloc Pourquoi ICEPROT** : photo produit en portrait (4:5).
-- **Liens** : réseaux sociaux, CGV, livraison, confidentialité, page revendeur.
+- **Liens** : réseaux sociaux, CGV, livraison, confidentialité, page revendeur (à me transmettre, ils ne sont pas dans `contenu.json`).
