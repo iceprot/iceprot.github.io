@@ -13,3 +13,7 @@ Le wordmark est Poppins ExtraBold vectorisé (approche −0,025 em). Le filet en
 ## Skill Claude Code
 
 `.claude/skills/ui-ux-pro-max/` : skill de design [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (licence MIT, commit `56ea9cf`), chargé automatiquement par Claude Code dans ce dépôt. Le script de recherche se lance depuis la racine du dépôt avec `python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<requête>" --domain <domaine>`. La charte ICEPROT reste prioritaire sur ses recommandations (palettes notamment).
+
+## Couleur d'accent
+
+Le corail remplace l'orange du brief initial : `#EC4E44` (principal), `#FF6B5E` (clair, survols), `#C8382F` (foncé). La glace du tube garde sa couleur de parfum (orange sanguine) et le favicon garde la palette de l'avatar Instagram.
