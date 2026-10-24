@@ -72,11 +72,11 @@
     "bloc": "5. Inscription communauté (formulaire)",
     "afficher": true,
     "textes": {
-      "inscription.surtitre": "Lorem ipsum",
-      "inscription.titre": "Lorem ipsum dolor *sit amet*",
-      "inscription.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "inscription.consentement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "inscription.bouton": "Lorem ipsum dolor"
+      "inscription.surtitre": "ICEPROT",
+      "inscription.titre": "Vous souhaitez en savoir plus? *On vous écoute*",
+      "inscription.texte": "Salles de sport, de yoga, crossfit, hyrox, évènementiels ou tout simplement vous aimez les glaces et les proteines. Inscrivez vous.",
+      "inscription.consentement": "Si vous souhaitez recevoir notre newsletter, cochez la case.",
+      "inscription.bouton": "Je suis intéressé(e)"
     }
   },
   "profils": {
@@ -185,7 +185,7 @@
     "bloc": "11. Appel final (bas de page)",
     "afficher": true,
     "textes": {
-      "final.titre": "FUEL YOUR NEXT LEVEL *ipsum*",
+      "final.titre": "FUEL YOUR NEXT LEVEL *coming soon*",
       "final.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       "final.bouton-1": "Lorem ipsum",
       "final.bouton-2": "Dolor sit"
