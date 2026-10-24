@@ -1,4 +1,4 @@
-"""Vérifie contenu.json : JSON valide, blocs en true/false, textes en chaînes, identifiants connus."""
+"""Vérifie contenu.json : JSON valide, un groupe par bloc, afficher en true/false, textes en chaînes, noms connus."""
 import json, re, sys
 
 try:
@@ -11,19 +11,26 @@ except json.JSONDecodeError as e:
 page = open("index.html", encoding="utf-8").read()
 blocs_page = set(re.findall(r'data-bloc="([^"]+)"', page))
 champs_page = set(re.findall(r'data-champ="([^"]+)"', page))
-erreurs = []
+erreurs, nb_textes = [], 0
 
-for nom, val in c.get("blocs", {}).items():
+for nom, bloc in c.items():
+    if nom.startswith("_"):
+        continue
     if nom not in blocs_page:
         erreurs.append(f'bloc inconnu "{nom}" (blocs possibles : {", ".join(sorted(blocs_page))})')
-    if not isinstance(val, bool):
-        erreurs.append(f'bloc "{nom}" : écrire true ou false, sans guillemets')
-for nom, val in c.get("textes", {}).items():
-    if nom not in champs_page:
-        erreurs.append(f'champ inconnu "{nom}" : vérifiez son orthographe dans CHAMPS.md')
-    if not isinstance(val, str):
-        erreurs.append(f'champ "{nom}" : le texte doit être entre guillemets')
+        continue
+    if not isinstance(bloc, dict):
+        erreurs.append(f'bloc "{nom}" : la structure du groupe a été modifiée')
+        continue
+    if not isinstance(bloc.get("afficher"), bool):
+        erreurs.append(f'bloc "{nom}" : "afficher" doit valoir true ou false, sans guillemets')
+    for champ, val in bloc.get("textes", {}).items():
+        nb_textes += 1
+        if champ not in champs_page:
+            erreurs.append(f'champ inconnu "{champ}" dans le bloc "{nom}" : ne changez pas les noms à gauche')
+        if not isinstance(val, str):
+            erreurs.append(f'champ "{champ}" : le texte doit être entre guillemets')
 
 if erreurs:
     sys.exit("Problèmes dans contenu.json :\n- " + "\n- ".join(erreurs))
-print(f"contenu.json OK : {len(c.get('blocs', {}))} blocs, {len(c.get('textes', {}))} textes.")
+print(f"contenu.json OK : {sum(1 for k in c if not k.startswith('_'))} blocs, {nb_textes} textes.")
