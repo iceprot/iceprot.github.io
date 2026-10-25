@@ -68,6 +68,6 @@ Ces trois réglages sont repris dans la page par Claude à chaque mise à jour (
 ## Médias à fournir
 
 - **Vidéo du hero** : MP4 (H.264) en 1920×1080, 8 à 15 s en boucle, sans son, moins de 5 Mo. Une version verticale pour mobile est un plus. Fichier à remplacer : `assets/video/hero-provisoire.mp4` (et l'image d'attente `assets/video/hero-poster.jpg`).
-- **Photo du bloc Inscription** : en place (`assets/fond-contact.jpg`, salle de musculation). Une version paysage de 2400 px de large serait plus nette sur grand écran.
+- **Photo du bloc Inscription** : en place (`assets/fond-contact.jpg`, salle de sport en béton). Une version de 2400 px de large serait plus nette sur grand écran.
 - **Photo du bloc Pourquoi ICEPROT** : photo produit en portrait (4:5).
 - **Liens** : réseaux sociaux, CGV, livraison, confidentialité, page revendeur (à me transmettre, ils ne sont pas dans `contenu.json`).
