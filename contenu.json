@@ -6,31 +6,33 @@
     "*mots* = manuscrit corail dans les titres, **mots** = gras.",
     "Mode d'emploi complet : CHAMPS.md"
   ],
+  "reglages": {
+    "bloc": "Réglages du site : référencement (Google, IA) et formulaire",
+    "seo_titre": "ICEPROT · Glace à l'eau protéinée : 8 g de protéines, 0 g de sucres",
+    "seo_description": "ICEPROT, la glace à l'eau protéinée française : 8 g de protéines, 0 g de sucres, 0 g de matières grasses, sans aspartame. Une alternative fraîche au shaker et à la barre protéinée. Lancement imminent.",
+    "formulaire_adresse_envoi": ""
+  },
   "entete": {
     "bloc": "1. En-tête (menu du haut)",
     "afficher": true,
     "textes": {
-      "nav.boutique": "Boutique",
-      "nav.boutique.1.titre": "Lorem ipsum",
-      "nav.boutique.1.texte": "Dolor sit amet · XX,XX €",
-      "nav.boutique.2.titre": "Consectetur pack",
-      "nav.boutique.2.texte": "Adipiscing elit sed do",
-      "nav.boutique.3.titre": "Tout voir",
+      "nav.1": "La glace",
       "nav.2": "Pourquoi ICEPROT",
       "nav.3": "Protéines 101",
-      "nav.connexion": "Connexion"
+      "nav.4": "FAQ",
+      "nav.bouton": "Nous contacter"
     }
   },
   "hero": {
     "bloc": "2. Hero (haut de page, avec la vidéo)",
     "afficher": true,
     "textes": {
-      "hero.surtitre": "Délicieuse et rafraîchissante",
-      "hero.titre": "Glace à l'eau protéinée *fuel your next level*",
-      "hero.sous-titre": "Pour les adaptes de sensation forte",
-      "hero.texte": "Nous fabriquons des glaces à l'eau protéinées comme alternative à tous les snacks, shakers, boissons afin de vous apporter une nouvelle expérience délicieuse et rafraîchissante.",
-      "hero.bouton-1": "En savoir plus",
-      "hero.bouton-2": "Dolor sit amet"
+      "hero.surtitre": "Lancement imminent · Marque française",
+      "hero.titre": "Glace à l'eau *protéinée.*",
+      "hero.sous-titre": "8 g de protéines. 0 g de sucres. 0 g de matières grasses.",
+      "hero.texte": "Après le sport, au bureau ou dans une alimentation riche en protéines : ICEPROT remplace le shaker, la barre ou le skyr par une glace à l'eau fraîche et légère. Encore un peu de patience.",
+      "hero.bouton-1": "Être prévenu du lancement",
+      "hero.bouton-2": "Découvrir la glace"
     }
   },
   "benefices": {
@@ -46,85 +48,96 @@
     "bloc": "4. Produit vedette (tube, prix, boutons)",
     "afficher": true,
     "textes": {
-      "produit.orbite.1": "Lorem ipsum",
-      "produit.orbite.2": "Dolor sit",
-      "produit.orbite.3": "Amet elit",
-      "produit.orbite.4": "Consectetur",
-      "produit.orbite.5": "Adipiscing",
-      "produit.orbite.6": "Sed do",
-      "produit.surtitre": "Lorem ipsum",
-      "produit.titre": "Le plaisir d'une glace, les protéines en plus.",
-      "produit.texte": "Iceprot réinvente la pause sportive avec une glace délicieuse et rafraîchissante à un bénéfice inédit : 8g de protéines. Légere et faible en sucres, c'est la glace que l'on mange par pur plaisir, tout en offrant à son corps ce qu'il mérite. Iceprot a été pensé pour s'intégrer naturellement dans votre quotidien..",
-      "produit.picto.1": "Lorem ipsum",
-      "produit.picto.2": "Dolor sit",
-      "produit.picto.3": "Amet elit",
-      "produit.picto.4": "Sed do",
-      "produit.point.1": "Sans sucres",
-      "produit.point.2": "Sans matières grasses",
-      "produit.point.3": "Sans aspartame",
-      "produit.prix.mention": "À PARTIR DE",
-      "produit.prix": "XX,XX €",
-      "produit.bouton-1": "Lorem ipsum",
-      "produit.bouton-2": "Dolor sit"
+      "produit.orbite.1": "Après le sport",
+      "produit.orbite.2": "Pause au bureau",
+      "produit.orbite.3": "Alternative au shaker",
+      "produit.orbite.4": "Régime protéiné",
+      "produit.orbite.5": "Goûter léger",
+      "produit.orbite.6": "Coup de chaud",
+      "produit.surtitre": "Glace à l'eau protéinée",
+      "produit.titre": "Le plaisir d'une glace, les *protéines* en plus.",
+      "produit.texte": "Un tube de 100 ml, une glace à l'eau givrée, 8 g de protéines de lactosérum. Pas de shaker à laver, pas de barre qui colle : vous la sortez du congélateur, vous attendez cinq minutes, vous la dégustez. Le premier parfum est fruité. Les autres restent secrets jusqu'au lancement.",
+      "produit.picto.1": "8 g de protéines",
+      "produit.picto.2": "Électrolytes ajoutés",
+      "produit.picto.3": "Se déguste glacée",
+      "produit.picto.4": "Sans aspartame",
+      "produit.point.1": "0 g de sucres",
+      "produit.point.2": "0 g de matières grasses",
+      "produit.point.3": "Marque française",
+      "produit.prix.mention": "DISPONIBILITÉ",
+      "produit.prix": "Bientôt",
+      "produit.bouton-1": "Être prévenu",
+      "produit.bouton-2": "Questions fréquentes"
     }
   },
   "inscription": {
     "bloc": "5. Inscription communauté (formulaire)",
     "afficher": true,
     "textes": {
-      "inscription.surtitre": "ICEPROT",
-      "inscription.titre": "Vous souhaitez en savoir plus? *On vous écoute*",
-      "inscription.texte": "Salles de sport, de yoga, crossfit, hyrox, évènementiels ou tout simplement vous aimez les glaces et les proteines. Inscrivez vous.",
-      "inscription.consentement": "Si vous souhaitez recevoir notre newsletter, cochez la case.",
-      "inscription.bouton": "Je suis intéressé(e)"
+      "inscription.surtitre": "Liste prioritaire",
+      "inscription.titre": "Goûtez-la *en premier.*",
+      "inscription.texte": "Particulier, salle de sport, club, organisateur d'événement, distributeur : laissez vos coordonnées. Nous vous rappelons avant le lancement pour les premières dégustations, les partenariats et les points de vente.",
+      "inscription.champ.nom": "Nom et prénom",
+      "inscription.champ.profil": "Vous êtes",
+      "inscription.champ.societe": "Société ou structure (facultatif)",
+      "inscription.champ.ville": "Ville ou code postal (facultatif)",
+      "inscription.champ.email": "E-mail",
+      "inscription.champ.tel": "Téléphone (facultatif)",
+      "inscription.champ.message": "Votre projet ou votre question (facultatif)",
+      "inscription.rgpd": "J'accepte qu'ICEPROT utilise ces informations pour me recontacter.",
+      "inscription.consentement": "Je veux aussi recevoir les nouvelles d'ICEPROT par e-mail (lancement, parfums, événements).",
+      "inscription.bouton": "Je veux être recontacté",
+      "inscription.mention": "Vos coordonnées servent uniquement à vous recontacter. Elles ne sont jamais revendues.",
+      "inscription.merci": "Merci ! Votre demande est bien arrivée. Nous vous recontactons très vite.",
+      "inscription.erreur": "L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous sur Instagram @iceproteine."
     }
   },
   "profils": {
     "bloc": "6. Profils (8 cartes)",
     "afficher": false,
     "textes": {
-      "profils.titre": "Lorem ipsum, dolor *sit amet*",
-      "profils.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "profils.1.titre": "Lorem ipsum",
-      "profils.1.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "profils.2.titre": "Dolor sit amet",
-      "profils.2.texte": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "profils.3.titre": "Consectetur elit",
-      "profils.3.texte": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "profils.4.titre": "Sed do eiusmod",
-      "profils.4.texte": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
-      "profils.5.titre": "Tempor incididunt",
-      "profils.5.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "profils.6.titre": "Ut labore et",
-      "profils.6.texte": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "profils.7.titre": "Dolore magna",
-      "profils.7.texte": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "profils.8.titre": "Aliqua ut enim",
-      "profils.8.texte": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+      "profils.titre": "Une glace, *mille pauses.*",
+      "profils.texte": "ICEPROT est née pour les sportifs. Elle s'invite aussi partout où l'on cherche des protéines sans sucres.",
+      "profils.1.titre": "Salle et musculation",
+      "profils.1.texte": "8 g de protéines en sortant de séance, sans shaker à préparer ni à laver.",
+      "profils.2.titre": "Running et cardio",
+      "profils.2.texte": "Une glace à l'eau fraîche, avec des électrolytes, pour finir la sortie sur une note légère.",
+      "profils.3.titre": "Sports collectifs",
+      "profils.3.texte": "Facile à distribuer après le match ou l'entraînement, directement depuis le congélateur du club.",
+      "profils.4.titre": "Régime protéiné",
+      "profils.4.texte": "0 g de sucres et 0 g de matières grasses : une envie de glace qui reste dans vos objectifs.",
+      "profils.5.titre": "Pause au bureau",
+      "profils.5.texte": "Une alternative fraîche à la barre ou au biscuit de 16 h.",
+      "profils.6.titre": "Coachs et salles",
+      "profils.6.texte": "Une offre originale pour vos adhérents, à proposer au bar ou à l'accueil.",
+      "profils.7.titre": "Événements sportifs",
+      "profils.7.texte": "Courses, tournois, salons : une collation qui rafraîchit les participants.",
+      "profils.8.titre": "Les gourmands",
+      "profils.8.texte": "Pour celles et ceux qui aiment simplement les glaces, avec des protéines en bonus."
     }
   },
   "pourquoi": {
     "bloc": "7. Pourquoi ICEPROT",
     "afficher": false,
     "textes": {
-      "pourquoi.surtitre": "Lorem ipsum",
-      "pourquoi.titre": "Lorem ipsum dolor",
-      "pourquoi.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "pourquoi.point.1": "Lorem ipsum dolor",
-      "pourquoi.point.2": "Sit amet consectetur",
-      "pourquoi.point.3": "Adipiscing elit sed",
-      "pourquoi.point.4": "Do eiusmod tempor",
-      "pourquoi.point.5": "Incididunt ut labore",
-      "pourquoi.point.6": "Et dolore magna",
-      "pourquoi.rond.1.etiquette": "Lorem",
-      "pourquoi.rond.1.titre": "Ipsum",
-      "pourquoi.rond.1.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
-      "pourquoi.rond.2.etiquette": "Dolor",
-      "pourquoi.rond.2.titre": "Sit amet",
-      "pourquoi.rond.2.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
-      "pourquoi.rond.3.etiquette": "Elit",
-      "pourquoi.rond.3.titre": "Sed do",
-      "pourquoi.rond.3.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing."
+      "pourquoi.surtitre": "Pourquoi ICEPROT",
+      "pourquoi.titre": "Pourquoi une glace protéinée ?",
+      "pourquoi.texte": "Parce qu'après l'effort, on a envie de fraîcheur. ICEPROT réunit les protéines d'un shaker et le plaisir d'une glace à l'eau, sans sucres ni matières grasses.",
+      "pourquoi.point.1": "8 g de protéines par tube",
+      "pourquoi.point.2": "0 g de sucres",
+      "pourquoi.point.3": "0 g de matières grasses",
+      "pourquoi.point.4": "Sans aspartame",
+      "pourquoi.point.5": "Électrolytes ajoutés",
+      "pourquoi.point.6": "Tube de 100 ml",
+      "pourquoi.rond.1.etiquette": "Énergie",
+      "pourquoi.rond.1.titre": "Électrolytes",
+      "pourquoi.rond.1.texte": "Ajoutés dans chaque tube, pour accompagner la fin de séance.",
+      "pourquoi.rond.2.etiquette": "Protéines",
+      "pourquoi.rond.2.titre": "8 g",
+      "pourquoi.rond.2.texte": "Des protéines de lactosérum, dans une glace à l'eau.",
+      "pourquoi.rond.3.etiquette": "Plaisir",
+      "pourquoi.rond.3.titre": "Fraîcheur",
+      "pourquoi.rond.3.texte": "Le goût d'une vraie glace à l'eau, sans sucres."
     }
   },
   "proteines-101": {
@@ -132,70 +145,70 @@
     "afficher": false,
     "textes": {
       "c101.surtitre": "Protéines 101",
-      "c101.titre": "Lorem ipsum, dolor *sit amet*.",
-      "c101.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "c101.bouton": "Lorem ipsum",
-      "c101.1.titre": "Lorem ipsum",
-      "c101.1.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "c101.2.titre": "Dolor sit amet",
-      "c101.2.texte": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "c101.3.titre": "Consectetur elit",
-      "c101.3.texte": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "c101.4.titre": "Sed do eiusmod",
-      "c101.4.texte": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+      "c101.titre": "Les protéines, *simplement.*",
+      "c101.texte": "Les protéines participent au maintien de la masse musculaire. On les trouve dans la viande, le poisson, les œufs, les produits laitiers et les légumineuses, et désormais dans une glace à l'eau.",
+      "c101.bouton": "Questions fréquentes",
+      "c101.1.titre": "Pourquoi des protéines",
+      "c101.1.texte": "Elles contribuent à la croissance et au maintien de la masse musculaire.",
+      "c101.2.titre": "Le lactosérum",
+      "c101.2.texte": "La protéine du petit-lait, celle des shakers. ICEPROT l'utilise sous forme hydrolysée.",
+      "c101.3.titre": "Quand les prendre",
+      "c101.3.texte": "Réparties sur la journée, en complément d'une alimentation variée et équilibrée.",
+      "c101.4.titre": "Et les sucres ?",
+      "c101.4.texte": "ICEPROT n'en contient pas : la douceur vient du sucralose et de la stévia."
     }
   },
   "comparatif": {
     "bloc": "9. Comparatif (tableau)",
     "afficher": false,
     "textes": {
-      "comparatif.titre": "Lorem ipsum dolor sit amet",
-      "comparatif.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "comparatif.colonne.2": "Lorem ipsum",
-      "comparatif.colonne.3": "Dolor sit",
-      "comparatif.ligne.1": "Lorem ipsum dolor",
-      "comparatif.ligne.2": "Sit amet consectetur",
-      "comparatif.ligne.3": "Adipiscing elit",
-      "comparatif.ligne.4": "Sed do eiusmod tempor",
-      "comparatif.ligne.5": "Incididunt ut labore",
-      "comparatif.ligne.6": "Et dolore magna aliqua",
-      "comparatif.ligne.7": "Ut enim ad minim",
-      "comparatif.ligne.8": "Quis nostrud exercitation",
-      "comparatif.bouton": "Lorem ipsum dolor"
+      "comparatif.titre": "Shaker, barre ou *glace* ?",
+      "comparatif.texte": "Trois façons d'ajouter des protéines à sa journée. Une seule se déguste glacée.",
+      "comparatif.colonne.2": "Shaker protéiné",
+      "comparatif.colonne.3": "Barre protéinée",
+      "comparatif.ligne.1": "À base d'eau",
+      "comparatif.ligne.2": "Prêt à consommer, sans préparation",
+      "comparatif.ligne.3": "Le plaisir d'un dessert",
+      "comparatif.ligne.4": "Se déguste glacé",
+      "comparatif.ligne.5": "0 g de sucres",
+      "comparatif.ligne.6": "Électrolytes ajoutés",
+      "comparatif.ligne.7": "Apporte des protéines",
+      "comparatif.ligne.8": "0 g de matières grasses",
+      "comparatif.bouton": "Être prévenu du lancement"
     }
   },
   "faq": {
     "bloc": "10. FAQ (questions)",
     "afficher": true,
     "textes": {
-      "faq.titre": "Lorem ipsum, *dolor*.",
-      "faq.1.question": "Lorem ipsum dolor sit amet ?",
-      "faq.1.reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      "faq.2.question": "Consectetur adipiscing elit sed do ?",
-      "faq.2.reponse": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "faq.3.question": "Eiusmod tempor incididunt ut labore ?",
-      "faq.3.reponse": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
-      "faq.4.question": "Et dolore magna aliqua ut enim ?",
-      "faq.4.reponse": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "faq.5.question": "Quis nostrud exercitation ullamco ?",
-      "faq.5.reponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+      "faq.titre": "Vos *questions.*",
+      "faq.1.question": "Qu'est-ce qu'ICEPROT ?",
+      "faq.1.reponse": "ICEPROT est une glace à l'eau protéinée, imaginée par une marque française. Chaque tube de 100 ml apporte 8 g de protéines de lactosérum, 0 g de sucres et 0 g de matières grasses, sans aspartame et avec des électrolytes ajoutés.",
+      "faq.2.question": "Peut-elle remplacer un shaker, une barre ou un skyr ?",
+      "faq.2.reponse": "Oui, comme collation : ICEPROT apporte des protéines sous une forme fraîche et légère, sans préparation. Ce n'est pas un substitut de repas, et elle s'intègre dans une alimentation variée et équilibrée.",
+      "faq.3.question": "Est-ce adapté à un régime protéiné ?",
+      "faq.3.reponse": "Avec 8 g de protéines, 0 g de sucres et 0 g de matières grasses par tube, ICEPROT trouve sa place dans une alimentation riche en protéines. En cas de régime suivi, demandez conseil à votre médecin ou à votre diététicien.",
+      "faq.4.question": "Quels sont les ingrédients et les allergènes ?",
+      "faq.4.reponse": "Eau, hydrolysat de protéines de lactosérum, arômes, sel, électrolytes et édulcorants (sucralose, glycosides de stéviol), selon le parfum. ICEPROT contient du lait (lactosérum). La liste complète sera publiée au lancement.",
+      "faq.5.question": "Quand et où pourrai-je l'acheter ?",
+      "faq.5.reponse": "Très bientôt. ICEPROT arrivera d'abord dans les salles de sport, les clubs, les événements sportifs et chez des revendeurs partenaires. Laissez vos coordonnées dans le formulaire ou suivez @iceproteine pour être prévenu en premier."
     }
   },
   "final": {
     "bloc": "11. Appel final (bas de page)",
     "afficher": true,
     "textes": {
-      "final.titre": "FUEL YOUR NEXT LEVEL *coming soon*",
-      "final.texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "final.bouton-1": "Lorem ipsum",
-      "final.bouton-2": "Dolor sit"
+      "final.titre": "Fuel your next level. *Bientôt.*",
+      "final.texte": "La glace à l'eau protéinée arrive. Inscrivez-vous pour la goûter avant tout le monde.",
+      "final.bouton-1": "Être prévenu",
+      "final.bouton-2": "Suivre @iceproteine"
     }
   },
   "pied": {
     "bloc": "12. Pied de page",
     "afficher": true,
     "textes": {
-      "pied.mention": "Lorem ipsum dolor sit amet"
+      "pied.mention": "Glace à l'eau protéinée · Cold nutrition"
     }
   }
 }

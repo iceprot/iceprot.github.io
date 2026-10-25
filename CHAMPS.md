@@ -42,11 +42,11 @@ Après chaque enregistrement, une vérification automatique se lance (onglet **A
 
 | Groupe | Bloc | Au lancement | Nombre de textes |
 |---|---|---|---|
-| `entete` | 1. En-tête (menu du haut) | affiché | 9 |
+| `entete` | 1. En-tête (menu du haut) | affiché | 5 |
 | `hero` | 2. Hero (haut de page, avec la vidéo) | affiché | 6 |
 | `benefices` | 3. Bandeau 8 g / 0 g / 0 g | affiché | 3 |
 | `produit` | 4. Produit vedette (tube, prix, boutons) | affiché | 20 |
-| `inscription` | 5. Inscription communauté (formulaire) | affiché | 5 |
+| `inscription` | 5. Inscription communauté (formulaire) | affiché | 16 |
 | `profils` | 6. Profils (8 cartes) | masqué | 18 |
 | `pourquoi` | 7. Pourquoi ICEPROT | masqué | 18 |
 | `proteines-101` | 8. Protéines 101 | masqué | 12 |
@@ -56,6 +56,14 @@ Après chaque enregistrement, une vérification automatique se lance (onglet **A
 | `pied` | 12. Pied de page | affiché | 1 |
 
 Les textes des blocs masqués peuvent être préparés à l'avance : ils apparaîtront tels quels le jour où le bloc sera réaffiché.
+
+## Les réglages (groupe `reglages`, en haut du fichier)
+
+- **`seo_titre`** : le titre de la page dans Google et dans l'onglet du navigateur. Idéalement 50 à 60 caractères, avec « glace à l'eau protéinée ».
+- **`seo_description`** : le texte sous le titre dans Google et dans les aperçus de partage. Idéalement 140 à 160 caractères.
+- **`formulaire_adresse_envoi`** : l'adresse du service qui reçoit les demandes du formulaire de contact (voir `SEO.md`, partie « Formulaire »). Tant qu'elle est vide, le formulaire fonctionne en démonstration et n'envoie rien.
+
+Ces trois réglages sont repris dans la page par Claude à chaque mise à jour (titre, description, données pour Google et les IA).
 
 ## Médias à fournir
 

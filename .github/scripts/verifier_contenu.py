@@ -16,6 +16,10 @@ erreurs, nb_textes = [], 0
 for nom, bloc in c.items():
     if nom.startswith("_"):
         continue
+    if nom == "reglages":
+        if not isinstance(bloc, dict) or not all(isinstance(v, str) for v in bloc.values()):
+            erreurs.append('reglages : chaque valeur doit être un texte entre guillemets')
+        continue
     if nom not in blocs_page:
         erreurs.append(f'bloc inconnu "{nom}" (blocs possibles : {", ".join(sorted(blocs_page))})')
         continue
@@ -33,4 +37,4 @@ for nom, bloc in c.items():
 
 if erreurs:
     sys.exit("Problèmes dans contenu.json :\n- " + "\n- ".join(erreurs))
-print(f"contenu.json OK : {sum(1 for k in c if not k.startswith('_'))} blocs, {nb_textes} textes.")
+print(f"contenu.json OK : {sum(1 for k in c if not k.startswith('_') and k != 'reglages')} blocs, {nb_textes} textes.")
