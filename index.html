@@ -288,6 +288,16 @@ button{font:inherit;color:inherit}
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+/* hero clair avec visuel fixe (en attendant la vidéo définitive) */
+.hero{background:#E6E2DC;color:var(--noir-chaud)}
+.hero .visuel-hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero::after{background:linear-gradient(90deg,rgba(236,233,228,.92) 0%,rgba(236,233,228,.65) 38%,rgba(236,233,228,0) 62%)}
+.hero .texte{color:var(--taupe)}
+.hero .label{color:var(--noir-chaud)!important}
+.hero .btn-b{background:var(--noir-chaud);color:var(--blanc)}
+.hero .btn-l:hover{background:var(--noir-chaud);color:var(--blanc);border-color:var(--noir-chaud)}
+@media (max-width:700px){.hero{display:block;min-height:0}.hero .visuel-hero{position:relative;height:460px;object-position:69% 70%}.hero::after{display:none}.hero .wrap{padding-top:28px;padding-bottom:56px}}
 </style>
 </head>
 <body>
@@ -381,11 +391,7 @@ button{font:inherit;color:inherit}
 
   <!-- 2. HERO VIDÉO -->
   <section class="hero" data-bloc="hero" aria-labelledby="h-hero">
-    <video id="video-hero" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-hidden="true">
-      <!-- Remplacer par la vidéo définitive (prévoir aussi une version mobile verticale) -->
-      <source src="assets/video/hero-provisoire.webm" type="video/webm">
-      <source src="assets/video/hero-provisoire.mp4" type="video/mp4">
-    </video>
+    <img class="visuel-hero" src="assets/hero-glace.jpg" alt="Tube ICEPROT planté dans la glace pilée, entouré de tranches d'orange sanguine" fetchpriority="high">
     <div class="wrap">
       <div class="contenu">
         <p class="label" style="color:var(--orange-vif);margin-bottom:18px" data-champ="hero.surtitre">Lancement imminent · Marque française</p>
@@ -398,7 +404,6 @@ button{font:inherit;color:inherit}
         </div>
       </div>
     </div>
-    <button class="lecture" type="button" aria-controls="video-hero" aria-label="Mettre la vidéo en pause"><i><svg viewBox="0 0 12 12" aria-hidden="true"><path class="pz" d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg></i><span>Pause</span></button>
   </section>
 
   <!-- 3. BANDEAU BÉNÉFICES -->
@@ -675,18 +680,6 @@ button{font:inherit;color:inherit}
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
   } else document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
 
-  // Vidéo : pause / lecture, et respect de « réduire les animations »
-  const video = document.getElementById('video-hero');
-  const bouton = document.querySelector('.hero .lecture');
-  const majBouton = () => {
-    const pause = video.paused;
-    bouton.querySelector('span').textContent = pause ? 'Lecture' : 'Pause';
-    bouton.setAttribute('aria-label', pause ? 'Lire la vidéo' : 'Mettre la vidéo en pause');
-    bouton.querySelector('.pz').setAttribute('d', pause ? 'M2 1l9 5-9 5z' : 'M2 1h3v10H2zM7 1h3v10H7z');
-  };
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) video.pause();
-  bouton.addEventListener('click', () => { video.paused ? video.play() : video.pause(); });
-  video.addEventListener('play', majBouton); video.addEventListener('pause', majBouton); majBouton();
 
   // Menu mobile
   const tiroir = document.getElementById('tiroir'), burger = document.querySelector('.burger');
