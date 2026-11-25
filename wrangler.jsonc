@@ -1,0 +1,16 @@
+// Réglages Cloudflare (Workers avec fichiers statiques).
+// Le site est construit par `npm run build` dans le dossier dist/.
+// La fonction worker/index.ts traite uniquement /api/* (formulaire → CRM Notion).
+// Le seul secret à créer dans Cloudflare est NOTION_TOKEN (Runtime variables and secrets).
+{
+  "name": "iceprot-site",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": { "enabled": true }
+}

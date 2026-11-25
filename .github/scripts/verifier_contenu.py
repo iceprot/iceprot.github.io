@@ -8,7 +8,7 @@ except json.JSONDecodeError as e:
     sys.exit(f"contenu.json n'est pas un JSON valide, ligne {e.lineno}, colonne {e.colno} : {e.msg}. "
              "Vérifiez les guillemets et les virgules autour de cette ligne.")
 
-page = open("index.html", encoding="utf-8").read()
+page = open("src/modele/index.html", encoding="utf-8").read()
 blocs_page = set(re.findall(r'data-bloc="([^"]+)"', page))
 champs_page = set(re.findall(r'data-champ="([^"]+)"', page))
 erreurs, nb_textes = [], 0

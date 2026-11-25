@@ -2,9 +2,9 @@ name: Vérifier contenu.json
 
 on:
   push:
-    paths: ["contenu.json", "index.html", ".github/scripts/verifier_contenu.py"]
+    paths: ["contenu.json", "src/modele/index.html", ".github/scripts/verifier_contenu.py"]
   pull_request:
-    paths: ["contenu.json", "index.html", ".github/scripts/verifier_contenu.py"]
+    paths: ["contenu.json", "src/modele/index.html", ".github/scripts/verifier_contenu.py"]
 
 jobs:
   verifier:
